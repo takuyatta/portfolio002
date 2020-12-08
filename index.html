@@ -11,25 +11,36 @@
 </head>
 <body>
     <div id="title">
-        <img src="pics/title.jpg" alt="背景">
+        <img id="title__bg" src="pics/title.jpg" alt="背景">
         <div class="title__container">
-            <div class="title__logo">
+
+            <div class="title__logo observe-obj1">
                 <img class="title__icon" src="pics/logo.png" alt="メインロゴ">
                 <p>Voice Languages</p>
             </div>
-            <div class="title__trial">
+
+            <div class="title__trial observe-obj2">
                 <p>FREE Trial</p>
-                <img class="title__icon" src="pics/start.png" alt="トライアルボタン">
+                <img class="title__icon" src="pics/rec.png" alt="トライアルボタン">
             </div>
-            <div class="title__login">
-                <img class="title__icon" src="pics/google-icon.png" alt="Googleでサインイン">
-                <img class="title__icon" src="pics/fb-icon.png" alt="FBでサインイン">
+
+            <div class="title__login observe-obj3">
+                <div class="title__login__btn">
+                    <img class="title__icon-mini" src="pics/google-icon.png" alt="Googleでサインイン">
+                    <span>SIGN IN WITH GOOGLE</span>
+                </div>
+                <div class="title__login__btn">
+                    <img class="title__icon-mini" src="pics/fb-icon.png" alt="FBでサインイン">
+                    <span>SIGN IN WITH FACEBOOK</span>
+                </div>
             </div>
+
         </div>
     </div>
-    <div id="global-container">
+    <!-- <div id="global-container">
         <p>Hello World</p>
-    </div>
+    </div> -->
+    <script src="./scripts/libs/fadein-observe.js"></script>
     <script src="./scripts/main.js"></script>
 </body>
 </html>

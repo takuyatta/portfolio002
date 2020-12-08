@@ -1,0 +1,88 @@
+@import "../modules/variables";
+@import "../modules/mixin";
+@import "../modules/base-fadeIn";
+@import "../modules/hover-act";
+
+//  全てのフェードインの対象の監視を起動
+body {
+    @extend .general-fadeIn;
+ }
+
+#title{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    &__bg {
+        object-fit: cover;
+        width: 100vw;
+        height: 100vh;
+    }
+}
+
+.title {
+    &__container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);
+        height: 100%;
+        width: 80%;
+        max-width: 700px;
+        text-align: center;
+    }
+    &__logo {
+        margin-top: $mg-top-lg;
+        padding-bottom: $pd-btm-lg;
+        color: $cWhite;
+        text-align: center;
+        font-size: $title-font-lg;
+        & > p {
+            margin-top: $mg-top-sm;
+        }
+    }
+
+    &__trial {
+        font-weight: 600;
+        color: $cWhite;
+        font-size: $title-font;
+        opacity: 0.3;
+        padding-bottom: $pd-btm-lg;
+        & > p {
+            padding-bottom: $pd-btm-sm;
+        }
+        & > img {
+            @extend .btn-act;
+        }
+    }
+
+    &__login {
+        padding-bottom: $pd-btm;
+        &__btn {
+            padding: 10px 20px;
+            width: $signin-btn;
+            background-color: #fff;
+            text-align: left;
+            font-size: $font-sm;
+            margin: 0 auto;
+            margin-bottom: 4vh;
+            border-radius: 30px;
+            @extend .btn-act;
+            & > span {
+                line-height: 20px;
+                vertical-align: middle;
+                padding-left: 10px;
+                color: $cGray;
+            }
+        }
+    }
+
+    &__icon{
+        width: 10vh;
+        max-width: 100px;
+        &-mini {
+            max-width: 20px;
+            vertical-align: middle;
+        }
+    }
+}

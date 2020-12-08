@@ -8,3 +8,7 @@
 @media (max-width: 449px){
     @import "breakpoints/under449";
   }
+
+@media (min-width: 670px){
+    @import "breakpoints/670up";
+  }

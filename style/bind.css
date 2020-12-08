@@ -1,6 +1,335 @@
+.general-fadeIn .observe-obj1.inview, body .observe-obj1.inview {
+  animation-name: general-moveUp;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0.2s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+
+@keyframes general-moveUp {
+  0% {
+    opacity: 0;
+    transform: translateY(8vh);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.general-fadeIn .observe-obj2.inview, body .observe-obj2.inview {
+  animation-name: general-moveUp2;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0.3s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+
+@keyframes general-moveUp2 {
+  0% {
+    opacity: 0;
+    transform: translateY(8vh);
+  }
+  100% {
+    opacity: 0.7;
+    transform: translateY(0);
+  }
+}
+
+.general-fadeIn .observe-obj3.inview, body .observe-obj3.inview {
+  animation-name: general-moveUp;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0.4s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+
+.copy-fadeIn .observe-copy.inview {
+  animation-name: copy-moveUp;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+
+@keyframes copy-moveUp {
+  0% {
+    opacity: 0;
+    transform: translateY(5vh);
+  }
+  70% {
+    opacity: 0.8;
+    transform: translateY(-1vh);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.txt-fadeIn .observe-txt.inview {
+  animation-name: txt-moveUp;
+  animation-duration: 1.4s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+
+@keyframes txt-moveUp {
+  0% {
+    opacity: 0;
+    transform: translateY(5vh);
+  }
+  70% {
+    opacity: 0.7;
+    transform: translateY(-0.2vh);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.border-fadein .observe-border.inview {
+  animation-name: border-run;
+  animation-duration: 1.2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+
+@keyframes border-run {
+  0% {
+    opacity: 0;
+    transform: scale(0, 1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+}
+
+.icon-jump .observe-icon.inview {
+  animation-name: icon-jump;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+
+@keyframes icon-jump {
+  0% {
+    opacity: 0;
+    transform: translateY(3vh);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateY(-7vh);
+  }
+  70% {
+    opacity: 0.7;
+    transform: translateY(1vh);
+  }
+  90% {
+    opacity: 0.9;
+    transform: translateY(-0.5vh);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.icon-jump .observe-icon.inview:nth-child(1) {
+  animation-delay: 0.13s;
+}
+
+.icon-jump .observe-icon.inview:nth-child(2) {
+  animation-delay: 0.26s;
+}
+
+.icon-jump .observe-icon.inview:nth-child(3) {
+  animation-delay: 0.39s;
+}
+
+.icon-jump .observe-icon.inview:nth-child(4) {
+  animation-delay: 0.52s;
+}
+
+.icon-jump .observe-icon.inview:nth-child(5) {
+  animation-delay: 0.65s;
+}
+
+.icon-jump .observe-icon.inview:nth-child(6) {
+  animation-delay: 0.78s;
+}
+
+.back-to-top .footer.inview .to-top {
+  animation-name: to-top;
+  animation-duration: 1.7s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+
+@keyframes to-top {
+  0% {
+    opacity: 0.1;
+    transform: translateY(0);
+  }
+  45% {
+    opacity: 0.9;
+    transform: translateY(-3.7vh);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-4vh);
+  }
+  55% {
+    opacity: 0.9;
+    transform: translateY(-3.7vh);
+  }
+  100% {
+    opacity: 0.1;
+    transform: translateY(0vh);
+  }
+}
+
+.observe-obj1,
+.observe-obj2,
+.observe-obj3,
+.observe-txt,
+.observe-border,
+.observe-gen,
+.observe-copy,
+.observe-icon {
+  opacity: 0;
+}
+
+.btn-act, .title__trial > img, .title__login__btn {
+  transition: transform all 0.1s ease;
+}
+
+.btn-act:hover, .title__trial > img:hover, .title__login__btn:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.btn-act:active, .title__trial > img:active, .title__login__btn:active {
+  transform: translateY(0.5vh);
+}
+
 #title {
-  width: 100%;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+#title__bg {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+}
+
+.title__container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
   height: 100%;
-  background-image: url("../../pics/title.jpg");
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+}
+
+.title__logo {
+  margin-top: 13vh;
+  padding-bottom: 10vh;
+  color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+  font-size: calc(2.1875rem + ((1vw - 2.8px) * 2.75));
+}
+
+.title__logo > p {
+  margin-top: 5vh;
+}
+
+.title__trial {
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: calc(1.125rem + ((1vw - 2.8px) * 1.75));
+  opacity: 0.3;
+  padding-bottom: 10vh;
+}
+
+.title__trial > p {
+  padding-bottom: 1vh;
+}
+
+.title__login {
+  padding-bottom: 8vh;
+}
+
+.title__login__btn {
+  padding: 10px 20px;
+  width: calc(13.75rem + ((1vw - 2.8px) * 24.359));
+  background-color: #fff;
+  text-align: left;
+  font-size: calc(0.6875rem + ((1vw - 2.8px) * 0.875));
+  margin: 0 auto;
+  margin-bottom: 4vh;
+  border-radius: 30px;
+}
+
+.title__login__btn > span {
+  line-height: 20px;
+  vertical-align: middle;
+  padding-left: 10px;
+  color: rgba(128, 128, 128, 0.9);
+}
+
+.title__icon {
+  width: 10vh;
+  max-width: 100px;
+}
+
+.title__icon-mini {
+  max-width: 20px;
+  vertical-align: middle;
+}
+
+@media (min-width: 670px) {
+  .title__logo {
+    font-size: 57px;
+  }
+  .title__trial {
+    font-size: 32px;
+    padding-bottom: 20vh;
+  }
+  .title__login__btn {
+    font-size: 18px;
+    height: 55px;
+    width: 315px;
+  }
+  .title__login__btn > span {
+    line-height: 37px;
+  }
 }
 /*# sourceMappingURL=bind.css.map */

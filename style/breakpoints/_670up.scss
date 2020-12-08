@@ -1,0 +1,26 @@
+// 最大値の設定
+$title-font-lg: 57px;
+$title-font: 32px;
+$font-sm: 18px;
+
+$signin-btn: 315px;
+
+.title {
+   &__logo {
+      font-size: $title-font-lg;
+   }
+   &__trial {
+      font-size: $title-font;
+      padding-bottom: 20vh;
+   }
+   &__login {
+      &__btn {
+         font-size: $font-sm;
+         height: 55px;
+         width: $signin-btn;
+         & > span {
+            line-height: 37px;
+         }
+      }
+   }
+}
