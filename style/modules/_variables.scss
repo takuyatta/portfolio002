@@ -4,7 +4,7 @@ $contentMaxWidth: 1200px;
 // ページで用いる配色設定
 $cWhite: rgba(255, 255, 255, 0.9);
 $cGray: rgba(128, 128, 128, 0.9);
-
+$cCover: rgba(84, 84, 84, 0.6);
 
 // フォントサイズ
 $title-font-lg: calc(2.1875rem + ((1vw - 2.8px) * 2.75));
@@ -12,6 +12,8 @@ $title-font: calc(1.125rem + ((1vw - 2.8px) * 1.75));
 
 $font-md: calc(1.125rem + ((1vw - 2.8px) * 1.75));
 $font-sm: calc(0.6875rem + ((1vw - 2.8px) * 0.875));
+
+$btnLabel: calc(0.8125rem + ((1vw - 2.8px) * 4.1667));
 
 // ボタンサイズ（幅）
 $signin-btn: calc(13.75rem + ((1vw - 2.8px) * 24.359));

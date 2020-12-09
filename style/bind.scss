@@ -9,6 +9,12 @@
     @import "breakpoints/under449";
   }
 
+  // タブレット表示の時
 @media (min-width: 670px){
     @import "breakpoints/670up";
+  }
+
+  // PCモニタ表示の時
+@media (min-width: 1025px){
+    @import "breakpoints/1025up";
   }

@@ -10,36 +10,84 @@
     <link rel="stylesheet" href="./style/bind.css">
 </head>
 <body>
-    <div id="title">
-        <img id="title__bg" src="pics/title.jpg" alt="背景">
-        <div class="title__container">
-
-            <div class="title__logo observe-obj1">
-                <img class="title__icon" src="pics/logo.png" alt="メインロゴ">
-                <p>Voice Languages</p>
-            </div>
-
-            <div class="title__trial observe-obj2">
-                <p>FREE Trial</p>
-                <img class="title__icon" src="pics/rec.png" alt="トライアルボタン">
-            </div>
-
-            <div class="title__login observe-obj3">
-                <div class="title__login__btn">
-                    <img class="title__icon-mini" src="pics/google-icon.png" alt="Googleでサインイン">
-                    <span>SIGN IN WITH GOOGLE</span>
+    <div id="global-container">
+        <!-- <div id="title">
+            <div class="title__container">
+    
+                <div class="title__logo observe-obj1">
+                    <img class="title__icon" src="pics/logo.png" alt="メインロゴ">
+                    <p>Voice Languages</p>
                 </div>
-                <div class="title__login__btn">
-                    <img class="title__icon-mini" src="pics/fb-icon.png" alt="FBでサインイン">
-                    <span>SIGN IN WITH FACEBOOK</span>
+    
+                <div class="title__trial observe-obj2">
+                    <p>FREE Trial</p>
+                    <img class="title__icon" src="pics/rec.png" alt="トライアルボタン">
                 </div>
+    
+                <div class="title__login observe-obj3">
+                    <div class="title__login__btn">
+                        <img class="title__icon-mini" src="pics/google-icon.png" alt="Googleでサインイン">
+                        <span>SIGN IN WITH GOOGLE</span>
+                    </div>
+                    <div class="title__login__btn">
+                        <img class="title__icon-mini" src="pics/fb-icon.png" alt="FBでサインイン">
+                        <span>SIGN IN WITH FACEBOOK</span>
+                    </div>
+                </div>
+    
             </div>
+        </div> -->
+        <div id="main">
+            <nav class="main-select">
+                <div class="main-select__back">
+                    <img src="pics/back-btn.png" alt="戻るボタン">
+                </div>
 
+                <div class="main-select__title">
+                    <p>Which language do you learn?</p>
+                </div>
+                
+                <section class="main-select__langs">
+                    <div class="lang">
+                        <div class="lang__pic">
+                            <img class="lang__img" src="pics/lang/US.jpg" alt="">
+                        </div>
+                        <p class="lang__name">English</p>
+                    </div>
+
+                    <div class="lang">
+                        <div class="lang__pic">
+                            <img class="lang__img" src="pics/lang/JAPAN.jpg" alt="">
+                        </div>
+                        <p class="lang__name">日本語</p>
+                    </div>
+
+                    <div class="lang">
+                        <div class="lang__pic">
+                            <img class="lang__img" src="pics/lang/FRANCE.jpg" alt="">
+                        </div>
+                        <p class="lang__name">Français</p>
+                    </div>
+
+                    <div class="lang">
+                        <div class="lang__pic">
+                            <img class="lang__img" src="pics/lang/CHINA.jpg" alt="">
+                        </div>
+                        <p class="lang__name">简体中文
+                        </p>
+                    </div>
+                    
+                </section>
+            </nav>
+            <!-- <section class="top">
+                <div class="top__select">
+                    <p>学習言語を選んでください</p>
+                </div>
+            </section> -->
         </div>
     </div>
-    <!-- <div id="global-container">
-        <p>Hello World</p>
-    </div> -->
+    
+
     <script src="./scripts/libs/fadein-observe.js"></script>
     <script src="./scripts/main.js"></script>
 </body>

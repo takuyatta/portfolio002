@@ -2,7 +2,7 @@
 $title-font-lg: 57px;
 $title-font: 32px;
 $font-sm: 18px;
-
+$btnLabel: 33px;
 $signin-btn: 315px;
 
 .title {
@@ -22,5 +22,14 @@ $signin-btn: 315px;
             line-height: 37px;
          }
       }
+   }
+}
+
+.main-select {
+   width: 80%;
+   &__langs .lang {
+      width: 42%;
+      margin: 4%;
+      height: 34vw;
    }
 }

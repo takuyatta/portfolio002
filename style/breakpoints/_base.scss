@@ -8,16 +8,15 @@ body {
     @extend .general-fadeIn;
  }
 
+ // タイトル画面のスタイル*******************************
 #title{
     width: 100vw;
     height: 100vh;
     position: relative;
+    background-image: url("../pics/title.jpg");
+    background-size: cover;
+    background-position: center;
     overflow: hidden;
-    &__bg {
-        object-fit: cover;
-        width: 100vw;
-        height: 100vh;
-    }
 }
 
 .title {
@@ -86,3 +85,97 @@ body {
         }
     }
 }
+
+ // 学習言語の選択画面のスタイル***************************
+ #main {
+     width: 100%;
+ }
+.main-select {
+    width: 90%;
+    height: 100vh;
+    margin: 0 auto;
+    &__back {
+        padding: 8vh 0;
+        & > img {
+            display: block;
+            margin: 0 auto;
+            transform: rotate(90deg);
+            width: 2vh;
+        }
+    }
+    &__title {
+        padding-bottom: $pd-btm;
+        & > p {
+            font-size: $title-font;
+            font-weight: 600;
+            text-align: center;
+        }
+    }
+    &__langs {
+        height: 60vh;
+        display: flex;
+        flex: auto; 
+        flex-wrap: wrap; 
+
+        & .lang {
+            position: relative;
+            width: 44%;
+            margin: 3%;
+            height: 40vw;
+            overflow: hidden;
+            &:hover {
+                .lang__pic::after {
+                    opacity: 0.4;
+                }
+                @extend .btn-act;
+            }
+            &__pic {
+                width: 100%;
+                height: 100%;
+                border-radius: 20%;
+                position: relative;
+                overflow: hidden;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    z-index: 10;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background-color: $cCover;
+                }
+            }
+            &__img {
+                border-radius: 20%;
+                position: absolute;
+                z-index: 5;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                
+            }
+            & > p {
+                position: absolute;
+                color: $cWhite;
+                font-size: $btnLabel;
+                font-weight: 600;
+                width: 100%;
+                text-align: center;
+                z-index: 20;
+                top: 50%;
+                left: 50%;
+                transform: translateY(-50%) translateX(-50%);
+            }
+        }
+    }
+}
+
+ // メインメニュー画面のスタイル***************************
+ 
+ .top {
+     height: 35vh;
+     background-image: url("../pics/title.jpg");
+     background-size: cover;
+     background-position: 50% 0%;
+ }

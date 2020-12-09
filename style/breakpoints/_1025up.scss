@@ -1,0 +1,14 @@
+.main-select {
+   width: 50%;
+   &__title {
+      padding: 10vh 0;
+   }
+   &__langs .lang {
+      width: 20%;
+      margin: 2%;
+      height: 8vw;
+      & > p {
+         font-size: calc(1.4375rem + ((1vw - 10.24px) * 1.046));
+      }
+   }
+}
