@@ -222,16 +222,16 @@
   opacity: 0;
 }
 
-.btn-act, .title__trial > img, .title__login__btn, .main-select__langs .lang:hover {
+.btn-act, .title__trial > img, .title__login__btn, .main-select__back:hover, .main-select__langs .lang:hover {
   transition: transform all 0.1s ease;
 }
 
-.btn-act:hover, .title__trial > img:hover, .title__login__btn:hover, .main-select__langs .lang:hover {
+.btn-act:hover, .title__trial > img:hover, .title__login__btn:hover, .main-select__back:hover, .main-select__langs .lang:hover {
   transform: scale(1.1);
   cursor: pointer;
 }
 
-.btn-act:active, .title__trial > img:active, .title__login__btn:active, .main-select__langs .lang:active:hover {
+.btn-act:active, .title__trial > img:active, .title__login__btn:active, .main-select__back:active:hover, .main-select__langs .lang:active:hover {
   transform: translateY(0.5vh);
 }
 
@@ -326,7 +326,12 @@
   padding: 8vh 0;
 }
 
+.main-select__back:hover > img {
+  transform: rotate(90deg) scale(1.5);
+}
+
 .main-select__back > img {
+  transition: all 0.2s ease;
   display: block;
   margin: 0 auto;
   transform: rotate(90deg);
@@ -344,7 +349,7 @@
 }
 
 .main-select__langs {
-  height: 60vh;
+  height: auto;
   display: flex;
   flex: auto;
   flex-wrap: wrap;
@@ -405,9 +410,20 @@
 
 .top {
   height: 35vh;
+  color: rgba(255, 255, 255, 0.9);
   background-image: url("../pics/title.jpg");
   background-size: cover;
   background-position: 50% 0%;
+}
+
+.top__select {
+  padding-top: 20px;
+  padding-right: 20px;
+  text-align: right;
+}
+
+.top__select > p {
+  padding-bottom: 1vh;
 }
 
 @media (min-width: 670px) {
