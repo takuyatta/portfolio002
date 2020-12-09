@@ -181,6 +181,7 @@ body {
 
  // メインメニュー画面のスタイル***************************
  
+ // TOPエリア
  .top {
      height: 35vh;
      color: $cWhite;
@@ -194,6 +195,82 @@ body {
          text-align: right;
          & > p {
              padding-bottom: $pd-btm-sm;
+         }
+     }
+     &__user {
+         text-align: center;
+        &-img {
+            & > img {
+                width: 80px;
+            }
+        }
+        &-name {
+            padding: 2vh;
+            font-size: $font-md;
+        }
+        &-follows {
+            & span {
+                padding: 0 2vw;
+            }
+        }
+     }
+ }
+
+ // レベル表示バー
+ .curr-level {
+     font-weight: 600;
+     height: 110px;
+     width: 80%;
+     transform: translateY(-50px);
+     background-color:white;
+     border: 1px solid rgb(51, 162, 170); 
+     border-radius: 15px;
+     margin: 0 auto;
+     &__title {
+        //  background-color:white; 
+         display: flex;
+         width: 90%;
+         margin: 0 auto;   
+         & .your {
+            padding: 10px 0px;
+            text-align: left;
+            color: $cBlack;
+            width: 60%; 
+         }
+         & .cefr {
+            padding: 10px 0px;
+            text-align: right;
+            color: green;
+            width: 40%; 
+         }
+     }
+     &__bar{
+        padding: 10px 0;
+         &-entire{
+             position: relative;
+             background-color: white;
+             border: 1px solid rgb(34, 107, 112);
+             width: 90%;
+             margin: 0 auto;  
+         }
+         &-your{
+             position: absolute;
+             z-index: 10;
+             top: 0;
+             bottom: 0;
+             left: 0;
+             background-color:green;
+             width: 10%;
+         }
+         &-label {
+             transform: translateY(30px);
+
+            // position: absolute;
+            // z-index: 20;
+            // top: 0;
+            // bottom: 0;
+            // left: 0;
+            // width: 10%;
          }
      }
  }
