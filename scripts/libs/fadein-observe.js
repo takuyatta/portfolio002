@@ -3,6 +3,10 @@
 const obj1s = document.querySelectorAll('.observe-obj1'); // タイトル画面の要素DOM
 const obj2s = document.querySelectorAll('.observe-obj2'); // タイトル画面の要素DOM
 const obj3s = document.querySelectorAll('.observe-obj3'); // タイトル画面の要素DOM
+const bars = document.querySelectorAll('.observe-bar'); // グラフバーの要素DOM
+const txts = document.querySelectorAll('.observe-txt'); // テキスト要素のDOM
+const label = document.querySelector('.observe-label'); // グラフバーのラベルのDOM
+const form = document.querySelector('.observe-form'); // グラフバーのラベルのDOM
 
 
 const cb = function(entries, observer) {
@@ -25,6 +29,10 @@ const io = new IntersectionObserver(cb, options);
 obj1s.forEach(obj1 => io.observe(obj1));
 obj2s.forEach(obj2 => io.observe(obj2));
 obj3s.forEach(obj3 => io.observe(obj3));
+bars.forEach(bar => io.observe(bar));
+txts.forEach(txt => io.observe(txt));
+io.observe(label);
+io.observe(form);
 
 
 // トップのカルーセルより下にスクロールしたら、ヘッダーが見えにくくなるので、その範囲に反応させてヘッダーに黒い背景幕を敷く

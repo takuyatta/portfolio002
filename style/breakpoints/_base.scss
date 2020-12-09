@@ -1,11 +1,16 @@
 @import "../modules/variables";
 @import "../modules/mixin";
 @import "../modules/base-fadeIn";
+@import "../modules/chart-act";
 @import "../modules/hover-act";
 
 //  全てのフェードインの対象の監視を起動
 body {
     @extend .general-fadeIn;
+    @extend .bar-expansion;
+    @extend .txt-fadeIn;
+    @extend .label-fadeIn;
+    @extend .form-fadeIn;
  }
 
  // タイトル画面のスタイル*******************************
@@ -180,7 +185,10 @@ body {
 }
 
  // メインメニュー画面のスタイル***************************
- 
+ .main-contents {
+     background-color: $cGrayBg;
+     height: 100vh;
+ }
  // TOPエリア
  .top {
      height: 35vh;
@@ -191,8 +199,9 @@ body {
 
      &__select {
          padding-top: 20px;
-         padding-right: 20px;
+         padding-right: 30px;
          text-align: right;
+         @extend .btn-act;
          & > p {
              padding-bottom: $pd-btm-sm;
          }
@@ -223,7 +232,7 @@ body {
      width: 80%;
      transform: translateY(-50px);
      background-color:white;
-     border: 1px solid rgb(51, 162, 170); 
+     border: 1px solid $cTheme; 
      border-radius: 15px;
      margin: 0 auto;
      &__title {
@@ -240,7 +249,7 @@ body {
          & .cefr {
             padding: 10px 0px;
             text-align: right;
-            color: green;
+            color: $cTheme;
             width: 40%; 
          }
      }
@@ -249,8 +258,8 @@ body {
          &-entire{
              position: relative;
              background-color: white;
-             border: 1px solid rgb(34, 107, 112);
-             width: 90%;
+             border: 1px solid $cTheme;
+             width: 85%;
              margin: 0 auto;  
          }
          &-your{
@@ -259,8 +268,10 @@ body {
              top: 0;
              bottom: 0;
              left: 0;
-             background-color:green;
+             background-color: $cTheme;
              width: 10%;
+             transform: scaleX(0);
+             transform-origin: left;
          }
          &-label {
              transform: translateY(30px);
@@ -280,28 +291,37 @@ body {
      &__wrapper {
          width: 80%;
          margin: 0 auto;
+         font-weight: 600;
      }
      &__title {
          font-size: $font-md;
-         font-weight: 600;
+         
          padding-bottom: 10px;
      }
      &__form {
-         height: 150px;
-         padding: 20px;
-         background-color: antiquewhite;
+         height: auto;
+         padding: 10px;
+         background-color: white;
+         border-radius: 20px;
      }
      &__input {
          display: block;
          height:30px;
-         width: 100%;
-         margin: 20px auto;
-         border: 1px solid green;
+         width: 80%;
+         margin: 10px auto;
+         border: 2px solid $cTheme;
      }
      &__btn {
         display: block;
-        padding: 10px;
+        width: 50%;
+        background-color: $cTheme;
+        color: $cWhite;
+        text-align: center;
+        padding: 5px;
         margin: 0 auto;
-        border: 1px solid green;
+        border-radius: 20px;
+        @extend .btn-act;
      }
  }
+
+ //コンテンツエリア

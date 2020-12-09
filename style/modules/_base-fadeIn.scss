@@ -1,7 +1,7 @@
 
 // スクロールによって 'inview' クラスが付く要素に対する、フェードインアニメーションの設定
 
-// 画像など汎用のフェードイン
+// タイトル画面の要素フェードイン
 .general-fadeIn {
    & .observe-obj1.inview {
       @include animation(
@@ -52,45 +52,20 @@
    }
 }
 
-// キャッチコピー用のフェードイン
-.copy-fadeIn {
-   & .observe-copy.inview {
-      @include animation(
-         $name: copy-moveUp,
-         $duration: 1.5s,
-         $timing-function: ease-in-out,
-         $fill-mode: forwards
-      );
-      @keyframes copy-moveUp {
-         0% {
-         opacity: 0;
-         transform: translateY(5vh);
-         }
-         70% {
-         opacity: 0.8;
-         transform: translateY(-1vh);
-         }
-         100% {
-         opacity: 1;
-         transform: translateY(0);
-         }
-      }
-   }  
-}
 
-// タイトルテキスト用のフェードイン
+// メニュー画面のテキスト 及び トピックセクションの フェードイン
 .txt-fadeIn {
    & .observe-txt.inview {
       @include animation(
          $name: txt-moveUp,
-         $duration: 1.4s,
+         $duration: 1s,
          $timing-function: ease-in-out,
          $fill-mode: forwards
       );
       @keyframes txt-moveUp {
          0% {
             opacity: 0;
-            transform: translateY(5vh);
+            transform: translateY(1vh);
          }
          70% {
             opacity: 0.7;
@@ -101,117 +76,65 @@
             transform: translateY(0);
          }
       }
-   }
-}
-
-// タイトル下部のボーダーラインのフェードイン
-.border-fadein {
-   & .observe-border.inview {
-      @include animation(
-         $name: border-run,
-         $duration: 1.2s,
-         $timing-function: ease-in-out,
-         $fill-mode: forwards
-      );
-      @keyframes border-run {
-         0% {
-         opacity: 0;
-         transform: scale(0, 1);
-         }
-         100% {
-         opacity: 1;
-         transform: scale(1, 1);
-         }
-      }
-   }
-}
-
-// アイコンが跳ねて飛び出すフェードイン
-.icon-jump {
-   & .observe-icon.inview {
-      @include animation(
-         $name: icon-jump,
-         $duration: 0.5s,
-         $timing-function: ease-in-out,
-         $fill-mode: forwards
-      );
-      @keyframes icon-jump {
-            0% {
-               opacity: 0;
-               transform: translateY(3vh);
-            }
-            50% {
-               opacity: 0.5;
-               transform: translateY(-7vh);
-            }
-            70% {
-            opacity: 0.7;
-            transform: translateY(1vh);
-            }
-            90% {
-            opacity: 0.9;
-            transform: translateY(-0.5vh);
-            }
-            100% {
-               opacity: 1;
-               transform: translateY(0);
-            }
-      }
       @for $i from 1 through 6 {
          &:nth-child(#{$i}) {
-               animation-delay: $i * 0.13s;
+               animation-delay: $i * 0.2s;
+         }
+      }
+   }
+}
+// （現在のレベル）グラフバーのラベル
+.label-fadeIn {
+   & .observe-label.inview {
+      @include animation(
+         $name: label-moveUp,
+         $duration: 0.6s,
+         $delay: 0.8s,
+         $timing-function: ease-in-out,
+         $fill-mode: forwards
+      );
+      @keyframes label-moveUp {
+         0% {
+            opacity: 0;
+            transform: translateY(40px);
+         }
+         100% {
+            opacity: 1;
+            transform: translateY(30px);
          }
       }
    }
 }
 
-// ページ最下部のトップへもどるボタンのフェードアニメーション
-.back-to-top {
-   & .footer.inview {
-      & .to-top {
-         @include animation(
-            $name: to-top,
-            $duration: 1.7s,
-            $timing-function: ease-in-out,
-            $iteration-count: infinite
-         );
-         @keyframes to-top {
-               0% {
-                  opacity: 0.1;
-                  transform: translateY(0);
-                  
-               }
-               45% {
-                  opacity: 0.9;
-                  transform: translateY(-3.7vh);
-               }
-               50% {
-                  opacity: 1;
-                  transform: translateY(-4vh);
-               }
-               55% {
-                  opacity: 0.9;
-                  transform: translateY(-3.7vh);
-               }
-               100% {
-                  opacity: 0.1;
-                  transform: translateY(0vh);
-                  
-               }
-         }    
-      }
+// 検索フォームの フェードイン
+.form-fadeIn {
+   & .observe-form.inview {
+      @include animation(
+         $name: form-moveUp,
+         $duration: 1s,
+         $delay: 0.8s,
+         $timing-function: ease-in-out,
+         $fill-mode: forwards
+      );
+      @keyframes form-moveUp {
+         0% {
+            opacity: 0;
+            transform: translateY(1vh);
+         }
+         100% {
+            opacity: 1;
+            transform: translateY(0);
+         }
+      }   
    }
 }
-
 
 // 要素がフェードインしてくる前は、予めすべて透明化しておく
 .observe-obj1,
 .observe-obj2,
 .observe-obj3,
 .observe-txt,
-.observe-border,
-.observe-gen,
-.observe-copy,
-.observe-icon {
+.observe-label,
+.observe-form {
    opacity: 0;
 }

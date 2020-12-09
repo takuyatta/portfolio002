@@ -1,0 +1,20 @@
+// グラフのバーが伸びるアニメーション
+.bar-expansion {
+   & .observe-bar.inview {
+      @include animation(
+         $name: bar-act,
+         $duration: 1s,
+         $delay: 0.2s,
+         $timing-function: ease-in-out,
+         $fill-mode: forwards
+      );
+      @keyframes bar-act {
+         0% {
+         transform: scaleX(0);
+         }
+         100% {
+         transform: scaleX(1);
+         }
+      }
+   }  
+}
