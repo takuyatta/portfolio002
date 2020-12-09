@@ -735,6 +735,38 @@
           transform: translateY(30px);
 }
 
+.search__wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.search__title {
+  font-size: calc(1.125rem + ((1vw - 2.8px) * 1.75));
+  font-weight: 600;
+  padding-bottom: 10px;
+}
+
+.search__form {
+  height: 150px;
+  padding: 20px;
+  background-color: antiquewhite;
+}
+
+.search__input {
+  display: block;
+  height: 30px;
+  width: 100%;
+  margin: 20px auto;
+  border: 1px solid green;
+}
+
+.search__btn {
+  display: block;
+  padding: 10px;
+  margin: 0 auto;
+  border: 1px solid green;
+}
+
 @media (min-width: 670px) {
   .title__logo {
     font-size: 57px;

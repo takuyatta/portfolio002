@@ -274,3 +274,34 @@ body {
          }
      }
  }
+
+ // トピック検索フォーム
+ .search {
+     &__wrapper {
+         width: 80%;
+         margin: 0 auto;
+     }
+     &__title {
+         font-size: $font-md;
+         font-weight: 600;
+         padding-bottom: 10px;
+     }
+     &__form {
+         height: 150px;
+         padding: 20px;
+         background-color: antiquewhite;
+     }
+     &__input {
+         display: block;
+         height:30px;
+         width: 100%;
+         margin: 20px auto;
+         border: 1px solid green;
+     }
+     &__btn {
+        display: block;
+        padding: 10px;
+        margin: 0 auto;
+        border: 1px solid green;
+     }
+ }
