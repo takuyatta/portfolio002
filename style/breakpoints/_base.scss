@@ -1,5 +1,6 @@
-@import "../modules/variables";
+@import "../modules/variables";  // 配色など設定変数
 @import "../modules/mixin";
+@import "../modules/page-links";
 @import "../modules/base-fadeIn";
 @import "../modules/chart-act";
 @import "../modules/hover-act";
@@ -12,6 +13,7 @@ body {
     @extend .label-fadeIn;
     @extend .form-fadeIn;
     @extend .icon-fadeIn;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
  }
 
  // タイトル画面のスタイル*******************************
@@ -19,10 +21,10 @@ body {
     width: 100vw;
     height: 100vh;
     position: relative;
+    z-index: 50;
     background-image: url("../pics/title.jpg");
     background-size: cover;
     background-position: center;
-    overflow: hidden;
 }
 
 .title {
@@ -62,7 +64,6 @@ body {
     }
 
     &__login {
-        padding-bottom: $pd-btm;
         &__btn {
             padding: 10px 20px;
             width: $signin-btn;
@@ -106,14 +107,13 @@ body {
         &:hover {
             @extend .btn-act;
             & > img {
-                transform: rotate(90deg) scale(1.5);
+                transform: scale(1.5);
             }
         }
         & > img {
             transition: all 0.2s ease;
             display: block;
-            margin: 0 auto;
-            transform: rotate(90deg);
+            // margin: 0 auto;
             width: 2vh;
         }
     }
@@ -188,7 +188,7 @@ body {
  // メインメニュー画面のスタイル***************************
  .main-contents {
      background-color: $cGrayBg;
-     height: auto;
+     height: 100%;
      font-size: $font-sm;
  }
  // TOPエリア
@@ -204,11 +204,11 @@ body {
          text-align: right;
          &__area {
              margin-left: auto;
-             width: 9vw;
+             width: 15vw;
              padding: 5px;
              @extend .btn-act;
             & > p {
-                font-size: $title-font;
+                font-size: 15px;
                 padding-bottom: $pd-btm-sm;
             }
          }

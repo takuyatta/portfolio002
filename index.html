@@ -11,7 +11,8 @@
 </head>
 <body>
     <div id="global-container">
-        <!-- <div id="title">
+        <!-- タイトル画面 -->
+        <div id="title">
             <div class="title__container">
     
                 <div class="title__logo observe-obj1">
@@ -36,49 +37,9 @@
                 </div>
     
             </div>
-        </div> -->
+        </div>
         <div id="main">
-            <!-- <nav class="main-select">
-                <div class="main-select__back">
-                    <img src="pics/back-btn.png" alt="戻るボタン">
-                </div>
-
-                <div class="main-select__title">
-                    <p>Which language do you learn?</p>
-                </div>
-                
-                <section class="main-select__langs">
-                    <div class="lang">
-                        <div class="lang__pic">
-                            <img class="lang__img" src="pics/lang/US.jpg" alt="">
-                        </div>
-                        <p class="lang__name">English</p>
-                    </div>
-
-                    <div class="lang">
-                        <div class="lang__pic">
-                            <img class="lang__img" src="pics/lang/JAPAN.jpg" alt="">
-                        </div>
-                        <p class="lang__name">日本語</p>
-                    </div>
-
-                    <div class="lang">
-                        <div class="lang__pic">
-                            <img class="lang__img" src="pics/lang/FRANCE.jpg" alt="">
-                        </div>
-                        <p class="lang__name">Français</p>
-                    </div>
-
-                    <div class="lang">
-                        <div class="lang__pic">
-                            <img class="lang__img" src="pics/lang/CHINA.jpg" alt="">
-                        </div>
-                        <p class="lang__name">简体中文
-                        </p>
-                    </div>
-                    
-                </section>
-            </nav> -->
+            <!-- メインコンテンツ画面 -->
             <div class="main-contents">
 
                 <section class="top">
@@ -94,15 +55,15 @@
                         </div>
                         <p class="top__user-name">Guest user</p>
                         <div class="top__user-follows">
-                            <span class="following">フォロー中： 0 人</span>
-                            <span class="followed">フォロワー： 0 人</span>
+                            <span class="following">Follows： 0</span>
+                            <span class="followed">Followers： 0</span>
                         </div>
                     </div>
                 </section>
 
                 <div class="curr-level">
                     <div class="curr-level__title">
-                        <p class="your">現在のレベル</p>
+                        <p class="your">Current your level</p>
                         <p class="cefr observe-txt">CEFR A1</p>
                     </div>
                     <div class="curr-level__bar">
@@ -115,16 +76,16 @@
                 
                 <section class="search">
                     <div class="search__wrapper observe-form">
-                        <p class="search__title">トピック検索</p>
+                        <p class="search__title">Search topic</p>
                         <form action="#" class="search__form">
                            <input class="search__input" type="text"> 
-                           <input class="search__btn" type="submit" value="検索">  
+                           <input class="search__btn" type="submit" value="Search">  
                         </form>
                     </div>
                 </section>
 
                 <section class="contents">
-                    <p class="contents__title">トピック一覧</p>
+                    <p class="contents__title">Topics</p>
                     <div class="contents__wrapper">
 
                          <div class="contents__item observe-txt">
@@ -246,11 +207,53 @@
                     </div>
                 </section>
             </div>
+            <!-- 言語選択画面 -->
+            <nav class="main-select">
+                <div class="main-select__back lang-checked">
+                    <img src="pics/back-btn.png" alt="戻るボタン">
+                </div>
+
+                <div class="main-select__title">
+                    <p>Which language do you learn?</p>
+                </div>
+                
+                <section class="main-select__langs">
+                    <div class="lang lang-checked">
+                        <div class="lang__pic">
+                            <img class="lang__img" src="pics/lang/US.jpg" alt="">
+                        </div>
+                        <p class="lang__name">English</p>
+                    </div>
+
+                    <div class="lang lang-checked">
+                        <div class="lang__pic">
+                            <img class="lang__img" src="pics/lang/JAPAN.jpg" alt="">
+                        </div>
+                        <p class="lang__name">日本語</p>
+                    </div>
+
+                    <div class="lang lang-checked">
+                        <div class="lang__pic">
+                            <img class="lang__img" src="pics/lang/FRANCE.jpg" alt="">
+                        </div>
+                        <p class="lang__name">Français</p>
+                    </div>
+
+                    <div class="lang lang-checked">
+                        <div class="lang__pic">
+                            <img class="lang__img" src="pics/lang/CHINA.jpg" alt="">
+                        </div>
+                        <p class="lang__name">简体中文
+                        </p>
+                    </div>
+                    
+                </section>
+            </nav>
         </div>
     </div>
     
 
-    <script src="./scripts/libs/fadein-observe.js"></script>
-    <script src="./scripts/main.js"></script>
+    <script src="scripts/libs/fadein-observe.js"></script>
+    <script src="scripts/main.js"></script>
 </body>
 </html>

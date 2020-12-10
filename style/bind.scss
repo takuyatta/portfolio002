@@ -1,9 +1,6 @@
 // 各モジュールのCSSをインポートする
-
-@import "modules/variables"; // 配色など設定変数
-
-
 @import "breakpoints/base";
+
 
 @media (max-width: 449px){
     @import "breakpoints/under449";

@@ -1,3 +1,48 @@
+#title {
+  transition: transform 0.3s;
+}
+
+.main-contents {
+  position: fixed;
+  z-index: 40;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.contents-open #title {
+  position: fixed;
+  transform: translateX(-100vw);
+}
+
+.contents-open .main-contents {
+  position: relative;
+}
+
+.main-contents {
+  transition: all 0.6s;
+}
+
+.main-select {
+  position: fixed;
+  z-index: 30;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.language-select .main-contents {
+  position: fixed;
+  z-index: 20;
+  transform: translateX(-100vw);
+}
+
+.language-select .main-select {
+  position: relative;
+}
+
 .general-fadeIn .observe-obj1.inview, body .observe-obj1.inview {
   animation-name: general-moveUp;
   animation-duration: 0.8s;
@@ -253,14 +298,18 @@
   background-color: #1ba2a8;
 }
 
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 #title {
   width: 100vw;
   height: 100vh;
   position: relative;
+  z-index: 50;
   background-image: url("../pics/title.jpg");
   background-size: cover;
   background-position: center;
-  overflow: hidden;
 }
 
 .title__container {
@@ -296,10 +345,6 @@
 
 .title__trial > p {
   padding-bottom: 1vh;
-}
-
-.title__login {
-  padding-bottom: 8vh;
 }
 
 .title__login__btn {
@@ -345,14 +390,12 @@
 }
 
 .main-select__back:hover > img {
-  transform: rotate(90deg) scale(1.5);
+  transform: scale(1.5);
 }
 
 .main-select__back > img {
   transition: all 0.2s ease;
   display: block;
-  margin: 0 auto;
-  transform: rotate(90deg);
   width: 2vh;
 }
 
@@ -428,7 +471,7 @@
 
 .main-contents {
   background-color: #ebebeb;
-  height: auto;
+  height: 100%;
   font-size: calc(0.6875rem + ((1vw - 2.8px) * 0.875));
 }
 
@@ -447,12 +490,12 @@
 
 .top__select__area {
   margin-left: auto;
-  width: 9vw;
+  width: 15vw;
   padding: 5px;
 }
 
 .top__select__area > p {
-  font-size: calc(1.125rem + ((1vw - 2.8px) * 1.75));
+  font-size: 15px;
   padding-bottom: 1vh;
 }
 
@@ -757,6 +800,9 @@
   .top__user-img img {
     width: 140px;
   }
+  .top__select__area > p {
+    font-size: 25px;
+  }
   .curr-level {
     height: 18vh;
     width: 60vw;
@@ -804,6 +850,9 @@
   }
   .top__user-img img {
     width: 170px;
+  }
+  .top__select__area > p {
+    font-size: 35px;
   }
   .curr-level {
     height: 20vh;

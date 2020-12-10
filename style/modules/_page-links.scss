@@ -1,0 +1,56 @@
+// *********** タイトル画面 → コンテンツ画面のリンク ***********
+
+// タイトル画面のコンテナ動作速度
+#title {  
+   transition: transform 0.3s;
+}
+
+// メインコンテンツの画面の位置設定
+.main-contents {
+   position: fixed;
+   z-index: 40; 
+   top: 0;
+   left: 0;
+   right: 0;  
+   bottom: 0;
+}
+
+// タイトル画面のTrialボタンを押したときのスタイル付与
+.contents-open {
+   & #title {
+      position: fixed;
+      transform: translateX(-100vw);
+   }
+   & .main-contents {
+      position: relative;
+   }
+}
+
+
+// *********** コンテンツ画面 ⇔ 言語選択メニューのリンク ***********
+
+// タイトル画面のコンテナ動作速度
+.main-contents {  
+   transition: all 0.6s;
+}
+
+// メインコンテンツの画面の位置設定
+.main-select {
+   position: fixed;
+   z-index: 30; 
+   top: 0;
+   left: 0;
+   right: 0;  
+   bottom: 0;
+}
+
+.language-select {
+   & .main-contents {
+      position: fixed;
+      z-index: 20;
+      transform: translateX(-100vw);
+   }
+   & .main-select {
+      position: relative;
+   }
+}
