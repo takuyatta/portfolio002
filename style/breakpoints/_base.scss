@@ -188,6 +188,7 @@ body {
  .main-contents {
      background-color: $cGrayBg;
      height: 100vh;
+     font-size: $font-sm;
  }
  // TOPエリア
  .top {
@@ -242,12 +243,14 @@ body {
          margin: 0 auto;   
          & .your {
             padding: 1.5vh 0;
+            padding-left: 7vw;
             text-align: left;
             color: $cBlack;
             width: 60%; 
          }
          & .cefr {
             padding: 1.5vh 0;
+            padding-right: 7vw;
             text-align: right;
             color: $cTheme;
             width: 40%; 
@@ -275,6 +278,7 @@ body {
          }
          &-label {
             color: $cTheme;
+            padding-left: 3vw;
          }
      }
  }

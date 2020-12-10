@@ -12,3 +12,27 @@
       }
    }
 }
+
+.top {
+   height: 59vh; 
+   &__user-img img {
+      width: 8vw;
+   }
+}
+
+.curr-level {
+   height: 18vh;
+   width: 30vw;
+}
+
+.search {
+   &__wrapper {
+      width: 30vw;
+   }
+   &__input {
+      width: 70%;
+   }
+   &__btn {
+      width: 30%;
+   }
+}

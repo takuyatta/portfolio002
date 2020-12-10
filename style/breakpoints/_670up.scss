@@ -33,3 +33,27 @@ $signin-btn: 315px;
       height: 34vw;
    }
 }
+
+.top {
+   height: 59vh; 
+   &__user-img img {
+      width: 20vw;
+   }
+}
+
+.curr-level {
+   height: 18vh;
+   width: 60vw;
+}
+
+.search {
+   &__wrapper {
+      width: 60vw;
+   }
+   &__input {
+      width: 70%;
+   }
+   &__btn {
+      width: 30%;
+   }
+}
