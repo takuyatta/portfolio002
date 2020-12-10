@@ -472,7 +472,7 @@ body {
 .main-contents {
   background-color: #ebebeb;
   height: 100%;
-  font-size: calc(0.6875rem + ((1vw - 2.8px) * 0.875));
+  font-size: calc(0.875rem + ((1vw - 3.2px) * 1.7045));
 }
 
 .top {
@@ -624,6 +624,7 @@ body {
   font-weight: 600;
   font-size: calc(0.6875rem + ((1vw - 2.8px) * 0.875));
   margin-top: 8vh;
+  padding-bottom: 50px;
 }
 
 .contents__title {
@@ -854,6 +855,9 @@ body {
   }
   .main-select__langs .lang > p {
     font-size: calc(1.4375rem + ((1vw - 10.24px) * 1.046));
+  }
+  .main-contents {
+    font-size: 26px;
   }
   .top {
     height: 70vh;

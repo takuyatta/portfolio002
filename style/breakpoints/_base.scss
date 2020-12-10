@@ -189,7 +189,7 @@ body {
  .main-contents {
      background-color: $cGrayBg;
      height: 100%;
-     font-size: $font-sm;
+     font-size: $font-smr;
  }
  // TOPエリア
  .top {
@@ -334,6 +334,7 @@ body {
     font-weight: 600;
     font-size: $font-sm;
     margin-top: 8vh;
+    padding-bottom: 50px;
      &__title {
          font-size: $font-md;
          width: 80%;
