@@ -203,6 +203,7 @@ body {
          text-align: right;
          @extend .btn-act;
          & > p {
+             font-size: $title-font;
              padding-bottom: $pd-btm-sm;
          }
      }

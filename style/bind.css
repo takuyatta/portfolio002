@@ -375,6 +375,7 @@
 }
 
 .top__select > p {
+  font-size: calc(1.125rem + ((1vw - 2.8px) * 1.75));
   padding-bottom: 1vh;
 }
 
