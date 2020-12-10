@@ -14,9 +14,9 @@
 }
 
 .top {
-   height: 59vh; 
+   height: 70vh; 
    &__user-img img {
-      width: 8vw;
+      width: 170px;
    }
 }
 
@@ -34,6 +34,9 @@
 }
 
 .search {
+   &__title {
+      font-size: $font-sm;
+   }
    &__wrapper {
       width: 30vw;
    }
@@ -42,5 +45,50 @@
    }
    &__btn {
       width: 30%;
+   }
+}
+
+.contents {
+   &__title {
+      font-size: $font-sm;
+   }
+   &__wrapper {
+      flex-direction: row;
+      flex-wrap: wrap;
+   }
+   &__item {
+      width: 25%;
+      margin: 4vh 2vw 0 2vw;
+   }
+   &__label {
+      &-topic {
+         font-size: $font-sm;
+         padding: 0 0 20px 20px;
+      }
+      &-cefr {
+         font-size: 12px;
+         padding: 0 10px 20px 0;
+      }
+   }
+   &__btn {
+      font-size: 20px;
+      padding: 13px;
+      bottom: -10px;
+   }
+   &__prev-next {
+      width: 60vw;
+      max-width: 950px;
+      & form {
+      margin: 0 2vw;
+      width: 150px;
+      padding: 10px;
+      }
+   }
+}
+
+.bottom-menu {
+   display: none;
+   &PC {
+      display: block;
    }
 }

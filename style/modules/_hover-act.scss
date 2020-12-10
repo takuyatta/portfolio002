@@ -1,11 +1,25 @@
+@import "../modules/variables";
+
 // クリックボタンをホバー / クリックしたときの動作
 .btn-act {
    transition: transform all 0.1s ease;
    &:hover {
-       transform: scale(1.1);
+       transform: scale(1.2);
        cursor: pointer;
    }
    &:active {
        transform: translateY(0.5vh);
    }
 }
+
+// クリックボタンをホバーしたときの背景色変化
+.btn-hover {
+    transition: transform all 0.2s ease;
+    &:hover {
+        background-color: $cThemeHover;
+        cursor: pointer;
+    }
+    &:active {
+        background-color: $cTheme;
+    }
+ }

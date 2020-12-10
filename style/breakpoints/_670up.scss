@@ -37,7 +37,7 @@ $signin-btn: 315px;
 .top {
    height: 59vh; 
    &__user-img img {
-      width: 20vw;
+      width: 140px;
    }
 }
 
@@ -55,5 +55,20 @@ $signin-btn: 315px;
    }
    &__btn {
       width: 30%;
+   }
+}
+
+.contents {
+   &__wrapper {
+      flex-direction: row;
+      flex-wrap: wrap;
+   }
+   &__item {
+      width: 45%;
+      margin: 5vh 2vw 0 2vw;
+   }
+   &__prev-next form {
+      width: 20%;
+      padding: 10px;
    }
 }

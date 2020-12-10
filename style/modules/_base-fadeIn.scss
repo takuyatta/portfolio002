@@ -58,7 +58,7 @@
    & .observe-txt.inview {
       @include animation(
          $name: txt-moveUp,
-         $duration: 1s,
+         $duration: 0.3s,
          $timing-function: ease-in-out,
          $fill-mode: forwards
       );
@@ -129,12 +129,52 @@
    }
 }
 
+// メニュー画面のテキスト 及び トピックセクションの フェードイン
+.icon-fadeIn {
+   & .observe-icon.inview {
+      @include animation(
+         $name: icon-popUp,
+         $duration: 0.3s,
+         $timing-function: ease-in-out,
+         $fill-mode: forwards
+      );
+      @keyframes icon-popUp {
+            0% {
+               opacity: 0;
+               transform: translateY(3vh);
+            }
+            50% {
+               opacity: 0.5;
+               transform: translateY(-4vh);
+            }
+            70% {
+            opacity: 0.7;
+            transform: translateY(1vh);
+            }
+            90% {
+            opacity: 0.9;
+            transform: translateY(-0.5vh);
+            }
+            100% {
+               opacity: 1;
+               transform: translateY(0);
+            }
+      }
+      @for $i from 1 through 6 {
+         &:nth-child(#{$i}) {
+               animation-delay: $i * 0.13s;
+         }
+      }
+   }
+}
+
 // 要素がフェードインしてくる前は、予めすべて透明化しておく
 .observe-obj1,
 .observe-obj2,
 .observe-obj3,
 .observe-txt,
 .observe-label,
-.observe-form {
+.observe-form,
+.observe-icon {
    opacity: 0;
 }

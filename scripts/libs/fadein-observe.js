@@ -6,8 +6,8 @@ const obj3s = document.querySelectorAll('.observe-obj3'); // タイトル画面�
 const bars = document.querySelectorAll('.observe-bar'); // グラフバーの要素DOM
 const txts = document.querySelectorAll('.observe-txt'); // テキスト要素のDOM
 const label = document.querySelector('.observe-label'); // グラフバーのラベルのDOM
-const form = document.querySelector('.observe-form'); // グラフバーのラベルのDOM
-
+const form = document.querySelector('.observe-form'); // トピック検索フォームのDOM
+const icons = document.querySelectorAll('.observe-icon'); // PCモニターサイズ時のフッターメニューアイコンのDOM
 
 const cb = function(entries, observer) {
    entries.forEach(entry => {
@@ -19,7 +19,7 @@ const cb = function(entries, observer) {
 }
 
 const options = {
-   rootMargin: "-5% 0px 0px 0px", // ビューポート内に 監視要素が5%以上 侵入してから、発火させる
+   rootMargin: "-2% 0px 0px 0px", // ビューポート内に 監視要素が5%以上 侵入してから、発火させる
 };
 
 const io = new IntersectionObserver(cb, options);
@@ -33,6 +33,7 @@ bars.forEach(bar => io.observe(bar));
 txts.forEach(txt => io.observe(txt));
 io.observe(label);
 io.observe(form);
+icons.forEach(icon => io.observe(icon));
 
 
 // トップのカルーセルより下にスクロールしたら、ヘッダーが見えにくくなるので、その範囲に反応させてヘッダーに黒い背景幕を敷く

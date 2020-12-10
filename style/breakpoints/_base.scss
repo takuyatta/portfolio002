@@ -11,6 +11,7 @@ body {
     @extend .txt-fadeIn;
     @extend .label-fadeIn;
     @extend .form-fadeIn;
+    @extend .icon-fadeIn;
  }
 
  // タイトル画面のスタイル*******************************
@@ -199,19 +200,25 @@ body {
      background-position: 50% 0%;
 
      &__select {
-         padding: 4vh 10vw 4vh 0;
+         padding: 4vh 10vw 0 0;
          text-align: right;
-         @extend .btn-act;
-         & > p {
-             font-size: $title-font;
-             padding-bottom: $pd-btm-sm;
+         &__area {
+             margin-left: auto;
+             width: 9vw;
+             padding: 5px;
+             @extend .btn-act;
+            & > p {
+                font-size: $title-font;
+                padding-bottom: $pd-btm-sm;
+            }
          }
+         
      }
      &__user {
          text-align: center;
         &-img {
             & > img {
-                width: 25vw;
+                width: 80px;
             }
         }
         &-name {
@@ -318,7 +325,7 @@ body {
         padding: 2vh;
         margin: 0 auto;
         border-radius: 20px;
-        @extend .btn-act;
+        @extend .btn-hover;
      }
  }
 
@@ -330,12 +337,13 @@ body {
      &__title {
          font-size: $font-md;
          width: 80%;
+         max-width: 1025px;
          margin: 0 auto;
      }
      &__wrapper {
+         max-width: 1025px;
          height: auto;
-         width: 85%;
-         max-width: 1024px;
+         width: 85%;       
          margin: 0 auto;
          display: flex;
          flex: auto;
@@ -360,8 +368,7 @@ body {
         &-cefr {
             color: $cTheme;
             line-height: $font-sm;
-            width: 40%;
-            
+            width: 40%;       
             bottom: 0;
             padding: 0 5vw 2vh 0;
         }
@@ -377,6 +384,7 @@ body {
      &__btn {
         position: absolute;
         background-color: $cTheme;
+        @extend .btn-hover;
         color: $cWhite;
         padding: 2vh;
         width: 50%;
@@ -396,23 +404,21 @@ body {
          display: flex;
          flex-direction : row-reverse;
          justify-content: space-between; 
+         & form {
+             width: 30%;
+             background-color: $cTheme;
+             @extend .btn-hover;
+             padding: 7px;
+             border-radius: 20px;
+         }
          & > .prev {
-             display: none;
-             width: 30%;
-             background-color: $cSubBtn;
-             padding: 7px;
-             border-radius: 20px;
+             display: none;           
          }
-         & > .next {
-             width: 30%;
-             background-color: $cSubBtn;
-             padding: 7px;
-             border-radius: 20px;
-         }
+
      }
  }
 
-// ボトムメニュー
+// ボトムメニュー(モバイル)
 .bottom-menu {
     &__wrapper {
         width: 100%;
@@ -433,5 +439,36 @@ body {
         font-size: $title-font;
         border: 1px solid $cSubBtn;
         background-color: $cTheme;
+        @extend .btn-hover;
+    }
+}
+
+// ボトムメニュー(PCサイズ)
+.bottom-menuPC {
+    display: none;
+    &__wrapper {
+        width: 40%;
+        max-width: 500px;
+        margin:0 auto;
+        padding-bottom: 50px;
+    }
+    &__items {
+        width: 100%;
+        display: flex;
+        flex: auto; 
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    &__item {
+        display: block;
+        width: 70px;
+        height: 70px;
+        border-radius: 70px;
+        text-align: center;
+        line-height: 70px;
+        font-size: 30px;
+        color: $cWhite;
+        background-color: $cTheme;
+        @extend .btn-hover;
     }
 }
