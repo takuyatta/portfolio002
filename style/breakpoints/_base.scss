@@ -187,7 +187,7 @@ body {
  // メインメニュー画面のスタイル***************************
  .main-contents {
      background-color: $cGrayBg;
-     height: 100vh;
+     height: auto;
      font-size: $font-sm;
  }
  // TOPエリア
@@ -314,7 +314,7 @@ body {
         background-color: $cTheme;
         color: $cWhite;
         text-align: center;
-        padding: 1vh;
+        padding: 2vh;
         margin: 0 auto;
         border-radius: 20px;
         @extend .btn-act;
@@ -322,3 +322,115 @@ body {
  }
 
  //コンテンツエリア
+ .contents {
+    font-weight: 600;
+    font-size: $font-sm;
+    margin-top: 8vh;
+     &__title {
+         font-size: $font-md;
+         width: 80%;
+         margin: 0 auto;
+     }
+     &__wrapper {
+         height: auto;
+         width: 85%;
+         max-width: 1024px;
+         margin: 0 auto;
+         display: flex;
+         flex: auto;
+         flex-direction: column;  
+     }
+     &__item {
+        background-color:white;
+        width: 100%;
+        border-radius: 20px;
+        margin-top: 5vh;
+    }
+     &__label {
+         display: flex;
+         align-items: flex-end;
+         padding-top: 3vh;
+        &-topic {
+            font-size: $title-font;
+            width: 60%;
+            text-align: left;
+            padding: 0 0 2vh 6vw;
+        }
+        &-cefr {
+            color: $cTheme;
+            line-height: $font-sm;
+            width: 40%;
+            
+            bottom: 0;
+            padding: 0 5vw 2vh 0;
+        }
+     }
+
+     &__img {
+         position: relative;    
+         & > img {
+             border-radius: 0 0 20px 20px ;
+             width: 100%;
+         }
+     }
+     &__btn {
+        position: absolute;
+        background-color: $cTheme;
+        color: $cWhite;
+        padding: 2vh;
+        width: 50%;
+        border-radius: 20px;
+        text-align: center;
+        bottom: 5%;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);
+     }
+     &__prev-next {
+         margin: 4vh auto;
+         width: 80%;
+         color: $cWhite;
+         font-weight: 600;
+         font-size: 1rem;
+         text-align: center;
+         display: flex;
+         flex-direction : row-reverse;
+         justify-content: space-between; 
+         & > .prev {
+             display: none;
+             width: 30%;
+             background-color: $cSubBtn;
+             padding: 7px;
+             border-radius: 20px;
+         }
+         & > .next {
+             width: 30%;
+             background-color: $cSubBtn;
+             padding: 7px;
+             border-radius: 20px;
+         }
+     }
+ }
+
+// ボトムメニュー
+.bottom-menu {
+    &__wrapper {
+        width: 100%;
+    }
+    &__items {
+        width: 100%;
+        display: flex;
+        flex: auto; 
+        flex-direction: row;
+    }
+    &__item {
+        display: block;
+        width: 20%;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+        color: $cWhite;
+        font-size: $title-font;
+        border: 1px solid $cSubBtn;
+        background-color: $cTheme;
+    }
+}

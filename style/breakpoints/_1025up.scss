@@ -21,8 +21,16 @@
 }
 
 .curr-level {
-   height: 18vh;
+   height: 20vh;
    width: 30vw;
+   &__title {
+      & .your {
+         padding-left: 2vw;
+      }
+      & .cefr {
+         padding-right: 2vw;
+      }
+   }
 }
 
 .search {
