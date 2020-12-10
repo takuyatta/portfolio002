@@ -112,11 +112,11 @@
 @keyframes label-moveUp {
   0% {
     opacity: 0;
-    transform: translateY(40px);
+    transform: translateY(6vh);
   }
   100% {
     opacity: 1;
-    transform: translateY(30px);
+    transform: translateY(5vh);
   }
 }
 
@@ -361,7 +361,7 @@
 }
 
 .top {
-  height: 35vh;
+  height: 55vh;
   color: rgba(255, 255, 255, 0.9);
   background-image: url("../pics/title.jpg");
   background-size: cover;
@@ -369,8 +369,7 @@
 }
 
 .top__select {
-  padding-top: 20px;
-  padding-right: 30px;
+  padding: 4vh 10vw 4vh 0;
   text-align: right;
 }
 
@@ -383,23 +382,24 @@
 }
 
 .top__user-img > img {
-  width: 80px;
+  width: 25vw;
 }
 
 .top__user-name {
-  padding: 2vh;
+  padding: 3vh;
   font-size: calc(1.125rem + ((1vw - 2.8px) * 1.75));
 }
 
 .top__user-follows span {
-  padding: 0 2vw;
+  padding: 1vh 3vw;
 }
 
 .curr-level {
   font-weight: 600;
-  height: 110px;
-  width: 80%;
-  transform: translateY(-50px);
+  height: 20vh;
+  width: 80vw;
+  padding: 2vh 0;
+  transform: translateY(-10vh);
   background-color: white;
   border: 1px solid #1ba2a8;
   border-radius: 15px;
@@ -413,21 +413,21 @@
 }
 
 .curr-level__title .your {
-  padding: 10px 0px;
+  padding: 1.5vh 0;
   text-align: left;
   color: rgba(29, 29, 29, 0.9);
   width: 60%;
 }
 
 .curr-level__title .cefr {
-  padding: 10px 0px;
+  padding: 1.5vh 0;
   text-align: right;
   color: #1ba2a8;
   width: 40%;
 }
 
 .curr-level__bar {
-  padding: 10px 0;
+  padding: 1.5vh 0;
 }
 
 .curr-level__bar-entire {
@@ -451,7 +451,11 @@
 }
 
 .curr-level__bar-label {
-  transform: translateY(30px);
+  color: #1ba2a8;
+}
+
+.search {
+  margin-top: -3vh;
 }
 
 .search__wrapper {
@@ -462,12 +466,12 @@
 
 .search__title {
   font-size: calc(1.125rem + ((1vw - 2.8px) * 1.75));
-  padding-bottom: 10px;
+  padding-bottom: 2vh;
 }
 
 .search__form {
   height: auto;
-  padding: 10px;
+  padding: 2vh;
   background-color: white;
   border-radius: 20px;
 }
@@ -476,7 +480,7 @@
   display: block;
   height: 30px;
   width: 80%;
-  margin: 10px auto;
+  margin: 2vh auto;
   border: 2px solid #1ba2a8;
 }
 
@@ -486,7 +490,7 @@
   background-color: #1ba2a8;
   color: rgba(255, 255, 255, 0.9);
   text-align: center;
-  padding: 5px;
+  padding: 1vh;
   margin: 0 auto;
   border-radius: 20px;
 }
