@@ -285,16 +285,16 @@
   transform: translateY(0.5vh);
 }
 
-.btn-hover, .search__btn, .contents__btn, .contents__prev-next form, .bottom-menu__item, .bottom-menuPC__item {
+.btn-hover, .search__btn, .contents__btn, .contents__prev-next form, .appear .bottom-menu__item, .bottom-menuPC__item {
   transition: transform all 0.2s ease;
 }
 
-.btn-hover:hover, .search__btn:hover, .contents__btn:hover, .contents__prev-next form:hover, .bottom-menu__item:hover, .bottom-menuPC__item:hover {
+.btn-hover:hover, .search__btn:hover, .contents__btn:hover, .contents__prev-next form:hover, .appear .bottom-menu__item:hover, .bottom-menuPC__item:hover {
   background-color: #44cad1;
   cursor: pointer;
 }
 
-.btn-hover:active, .search__btn:active, .contents__btn:active, .contents__prev-next form:active, .bottom-menu__item:active, .bottom-menuPC__item:active {
+.btn-hover:active, .search__btn:active, .contents__btn:active, .contents__prev-next form:active, .appear .bottom-menu__item:active, .bottom-menuPC__item:active {
   background-color: #1ba2a8;
 }
 
@@ -717,17 +717,27 @@ body {
 }
 
 .bottom-menu__wrapper {
+  transform: translateY(100%);
+  transition: transform 0.3s;
+}
+
+.appear .bottom-menu__wrapper {
+  transform: translateY(0);
+  transition: transform 0.3s;
+  position: fixed;
+  bottom: 0;
+  z-index: 100;
   width: 100%;
 }
 
-.bottom-menu__items {
+.appear .bottom-menu__items {
   width: 100%;
   display: flex;
   flex: auto;
   flex-direction: row;
 }
 
-.bottom-menu__item {
+.appear .bottom-menu__item {
   display: block;
   width: 20%;
   height: 50px;
