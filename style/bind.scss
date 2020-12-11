@@ -1,5 +1,6 @@
 // 各モジュールのCSSをインポートする
-@import "breakpoints/base";
+@import "breakpoints/base-index";
+@import "breakpoints/base-lesson";
 
 
 @media (max-width: 449px){

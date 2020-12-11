@@ -1,0 +1,252 @@
+@import "../modules/variables"; 
+@import "../modules/mixin";
+@import "../modules/page-links";
+@import "../modules/base-fadeIn";
+@import "../modules/chart-act";
+@import "../modules/hover-act";
+
+body {
+   @extend .rec-anime;
+}
+.lesson {
+   max-width: 1024px;
+   height: 100vh;
+   margin: 0 auto;
+   &__back {
+      &-arrow {
+         padding: 5vh;
+         width: 12vh;
+         height: auto;
+         @extend .btn-act;
+         & > img {
+            width: 2vh;
+         }
+      }
+   }
+   &__title {
+      text-align: center;
+      font-size: $font-sm;
+      padding: 2vh 0;
+   }
+
+   &__items {
+      
+      &__wrapper {
+         width: 90%;
+         margin: 0 auto;
+         margin-bottom: 7vh;
+         display: flex;
+         flex: auto; 
+         flex-wrap: wrap;
+         justify-content: center;
+      }
+      &__item {
+         position: relative;
+         width: 37vw;
+         height: 37vw;
+         border-radius: 20px;
+         margin: 3vw;
+         overflow: hidden;
+         &:hover {
+            &::after {
+               content: "";
+               position: absolute;
+               z-index: 10;
+               top: 0;
+               left: 0;
+               right: 0;
+               bottom: 0;
+               background-color: black;
+               opacity: 0.4;
+            }
+            .lesson__items__label {
+               opacity: 1;
+            }
+         }
+      }
+      &__img {
+         position: absolute;
+         height: 100%;
+         width: 100%;
+         object-fit: cover;
+      }
+      &__label {
+         position: absolute;
+         z-index: 20;
+         color: $cWhite;
+         font-weight: 500;
+         width: 100%;
+         text-align: center;
+         top: 50%;
+         left: 50%;
+         transform: translateY(-50%) translateX(-50%);
+         opacity: 0;
+         &-top {
+            font-size: 25px;
+            padding: 5px 0;
+         }
+         &-under {
+            font-size: 15px;
+         }
+      }
+   }
+
+   &__rec {
+      &__wrapper {
+         width: 50vw;
+         margin: 0 auto;
+         text-align: center;
+      }
+      &__txt {
+         font-size: $font-smr;
+         padding: 3vh 0;
+      }
+      &__btn {
+         width: 15vw;
+         height: 15vw;
+         border-radius: 200px;
+         background-color: $cTheme;
+         margin: 0 auto;
+         @extend .btn-act;
+         &-arrow {
+            color: $cWhite;
+            font-size: 10vw;
+            line-height: 15vw;
+         }
+      }
+   }
+}
+
+
+.speak {
+   max-width: 1024px;
+   height: 100vh;
+   margin: 0 auto;
+   &__back {
+      &-arrow {
+         padding: 5vh;
+         width: 12vh;
+         height: auto;
+         @extend .btn-act;
+         & > img {
+            width: 2vh;
+         }
+      }
+   }
+   &__title {
+      text-align: center;
+      font-size: $font-smr;
+      padding: 2vh 0;
+   }
+   &__img {
+      position: relative;
+      width: 90%;
+      height: 30vh;
+      margin: 0 auto;
+      border-radius: 15px;
+      overflow: hidden;
+      margin-bottom: 7vh;
+      & > img {
+         width: 100%;
+         position: absolute;
+         height: 100%;
+         width: 100%;
+         object-fit: cover;
+      }
+   }
+
+   &__rec,
+   &__stop {
+      &.inview{
+         display: block;
+      }
+      display: none;
+      &__wrapper {
+         width: 50vw;
+         margin: 0 auto;
+         text-align: center;
+      }
+      &__txt {
+         font-weight: 600;
+         font-size: $font-smr;
+         padding: 3vh 0;
+      }
+      &__btn {
+         width: 25vw;
+         height: 25vw;
+         box-shadow: 2vw 2vw 2vw rgba(0,0,0,0.3); 
+         border-radius: 50%;
+         background-color: $cThemeLight;
+         border: 1px solid $cTheme;
+         margin: 0 auto;
+         @extend .btn-act;
+         &-mic {
+            color: $cTheme;
+            font-size: 10vw;
+            line-height: 25vw;
+         }
+      }
+   }
+
+   &__now-recording {
+      &.inview {
+         display: block;
+      }
+      display: none;
+      &__wrapper {
+         width: 50vw;
+         margin: 0 auto;
+         text-align: center;
+      }
+      &__txt {
+         font-weight: 600;
+         font-size: $font-smr;
+         padding: 3vh 0;
+      }
+      &__btn {
+         position: relative;
+         width: 25vw;
+         height: 25vw;
+         box-shadow: 2vw 2vw 2vw rgba(0,0,0,0.3); 
+         border-radius: 50%;
+         background-color: $cRedLight;
+         border: 1px solid $cRed;
+         margin: 0 auto;
+         &-circle {
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translateY(-50%) translateX(-50%);
+            width: 25vw;
+            height: 25vw;
+            border: 1px solid $cRed;
+            border-radius:50%;
+         }
+         &-mic {
+            color: $cRed;
+            font-size: 10vw;
+            line-height: 25vw;
+         }
+      }
+   }
+
+   &__stop {
+      &__bottom {
+         width: 90%;
+         margin: 4vh auto 0 auto;
+         display: flex;
+      }
+      &__listen {
+         width: 33vw;
+         padding: 20px;
+         margin: 0 auto;
+         text-align: center;
+      }
+      &__check {
+         width: 33vw;
+         padding: 20px;
+         margin: 0 auto;
+         text-align: center;
+      }
+   }
+}

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="decription" content="This is a portfolio web aplication of TakuyaKATO.">
+    <title>Voice Languages</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+    <link rel="stylesheet" href="../style/vendors/destyle.css">
+    <link rel="stylesheet" href="../style/bind.css">
+</head>
+<body>
+    <div id="global-container">
+        <div class="lesson">
+            <div class="lesson__back">
+                <div class="lesson__back-arrow">
+                    <img src="../pics/back-btn.png" alt="戻るボタン">                
+                </div>
+            </div>
+            <div class="lesson__title">
+                <p>Tap / Click on the image!</p>
+            </div>
+
+            <section class="lesson__items">
+                <div class="lesson__items__wrapper">
+
+                    <div class="lesson__items__item">
+                        <img class="lesson__items__img" src="../pics/topic/drink/coffee.jpg" alt="coffee">
+                        <div class="lesson__items__label">
+                            <p class="lesson__items__label-top">Coffee</p>
+                            <p class="lesson__items__label-under">コーヒー</p>
+                        </div>
+                    </div>
+
+                    <div class="lesson__items__item">
+                        <img class="lesson__items__img" src="../pics/topic/drink/tea.jpg" alt="tea">
+                        <div class="lesson__items__label">
+                            <p class="lesson__items__label-top">Tea</p>
+                            <p class="lesson__items__label-under">こうちゃ</p>
+                        </div>
+                    </div>
+
+                    <div class="lesson__items__item">
+                        <img class="lesson__items__img" src="../pics/topic/drink/juice.jpg" alt="juice">
+                        <div class="lesson__items__label">
+                            <p class="lesson__items__label-top">Juice</p>
+                            <p class="lesson__items__label-under">ジュース</p>
+                        </div>
+                    </div>
+
+                    <div class="lesson__items__item">
+                        <img class="lesson__items__img" src="../pics/topic/drink/beer.jpg" alt="beer">
+                        <div class="lesson__items__label">
+                            <p class="lesson__items__label-top">Beer</p>
+                            <p class="lesson__items__label-under">ビール</p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <div class="lesson__rec">
+                <div class="lesson__rec__wrapper">
+                    <p class="lesson__rec__txt">Try Speaking!</p>
+                    <div class="lesson__rec__btn">
+                        <div class="lesson__rec__btn-arrow"><i class="fas fa-angle-right"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="speak">
+            <div class="speak__back">
+                <div class="speak__back-arrow">
+                    <img src="../pics/back-btn.png" alt="戻るボタン">                
+                </div>
+            </div>
+            <div class="speak__title">
+                <p>What is this?</p>
+            </div>
+            <div class="speak__img">
+                <img src="../pics/topic/drink/coffee.jpg" alt="coffee">
+            </div>
+
+            <div class="speak__rec inview">
+                <div class="speak__rec__wrapper">
+                    <p class="speak__rec__txt">Push and Say it!</p>
+                    <div class="speak__rec__btn">
+                        <div class="speak__rec__btn-mic"><i class="fas fa-microphone"></i></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="speak__now-recording">
+                <div class="speak__now-recording__wrapper">
+                    <p class="speak__now-recording__txt">Now recording...</p>
+                    <div class="speak__now-recording__btn">
+                        <div class="speak__now-recording__btn-circle"></div>
+                        <div class="speak__now-recording__btn-mic"><i class="fas fa-microphone"></i></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="speak__stop">
+                <div class="speak__stop__wrapper">
+                    <p class="speak__stop__txt">TRY Again?</p>
+                    <div class="speak__stop__btn">
+                        <div class="speak__stop__btn-mic"><i class="fas fa-microphone"></i></div>
+                    </div>
+                </div>
+                <div class="speak__stop__bottom">
+                    <div class="speak__stop__listen">
+                        <p>Listen it</p>
+                    </div>
+                    <div class="speak__stop__check">
+                        <p>Check</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <script src="../scripts/libs/rec-button.js"></script>
+</body>
+</html>

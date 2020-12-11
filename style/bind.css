@@ -243,6 +243,27 @@
   animation-delay: 0.78s;
 }
 
+.rec-anime .speak__now-recording.inview .speak__now-recording__btn-circle, body .speak__now-recording.inview .speak__now-recording__btn-circle {
+  animation-name: rec-animation;
+  animation-duration: 1.2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+
+@keyframes rec-animation {
+  0% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(3);
+  }
+}
+
 .observe-obj1,
 .observe-obj2,
 .observe-obj3,
@@ -272,16 +293,16 @@
   }
 }
 
-.btn-act, .title__trial > img, .title__login__btn, .main-select__back:hover, .main-select__langs .lang:hover, .top__select__area {
+.btn-act, .title__trial > img, .title__login__btn, .main-select__back:hover, .main-select__langs .lang:hover, .top__select__area, .lesson__back-arrow, .lesson__rec__btn, .speak__back-arrow, .speak__rec__btn, .speak__stop__btn {
   transition: transform all 0.1s ease;
 }
 
-.btn-act:hover, .title__trial > img:hover, .title__login__btn:hover, .main-select__back:hover, .main-select__langs .lang:hover, .top__select__area:hover {
+.btn-act:hover, .title__trial > img:hover, .title__login__btn:hover, .main-select__back:hover, .main-select__langs .lang:hover, .top__select__area:hover, .lesson__back-arrow:hover, .lesson__rec__btn:hover, .speak__back-arrow:hover, .speak__rec__btn:hover, .speak__stop__btn:hover {
   transform: scale(1.2);
   cursor: pointer;
 }
 
-.btn-act:active, .title__trial > img:active, .title__login__btn:active, .main-select__back:active:hover, .main-select__langs .lang:active:hover, .top__select__area:active {
+.btn-act:active, .title__trial > img:active, .title__login__btn:active, .main-select__back:active:hover, .main-select__langs .lang:active:hover, .top__select__area:active, .lesson__back-arrow:active, .lesson__rec__btn:active, .speak__back-arrow:active, .speak__rec__btn:active, .speak__stop__btn:active {
   transform: translateY(0.5vh);
 }
 
@@ -781,6 +802,582 @@ body {
   background-color: #1ba2a8;
 }
 
+#title {
+  transition: transform 0.3s;
+}
+
+.main-contents {
+  position: fixed;
+  z-index: 40;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.contents-open #title {
+  position: fixed;
+  transform: translateX(-100vw);
+}
+
+.contents-open .main-contents {
+  position: relative;
+}
+
+.main-contents {
+  transition: all 0.6s;
+}
+
+.main-select {
+  position: fixed;
+  z-index: 30;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.language-select .main-contents {
+  position: fixed;
+  z-index: 20;
+  transform: translateX(-100vw);
+}
+
+.language-select .main-select {
+  position: relative;
+}
+
+.general-fadeIn .observe-obj1.inview, body .observe-obj1.inview {
+  animation-name: general-moveUp;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0.2s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+
+@keyframes general-moveUp {
+  0% {
+    opacity: 0;
+    transform: translateY(8vh);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.general-fadeIn .observe-obj2.inview, body .observe-obj2.inview {
+  animation-name: general-moveUp2;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0.3s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+
+@keyframes general-moveUp2 {
+  0% {
+    opacity: 0;
+    transform: translateY(8vh);
+  }
+  100% {
+    opacity: 0.7;
+    transform: translateY(0);
+  }
+}
+
+.general-fadeIn .observe-obj3.inview, body .observe-obj3.inview {
+  animation-name: general-moveUp;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0.4s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+
+.txt-fadeIn .observe-txt.inview, body .observe-txt.inview {
+  animation-name: txt-moveUp;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+
+@keyframes txt-moveUp {
+  0% {
+    opacity: 0;
+    transform: translateY(1vh);
+  }
+  70% {
+    opacity: 0.7;
+    transform: translateY(-0.2vh);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.txt-fadeIn .observe-txt.inview:nth-child(1), body .observe-txt.inview:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.txt-fadeIn .observe-txt.inview:nth-child(2), body .observe-txt.inview:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.txt-fadeIn .observe-txt.inview:nth-child(3), body .observe-txt.inview:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.txt-fadeIn .observe-txt.inview:nth-child(4), body .observe-txt.inview:nth-child(4) {
+  animation-delay: 0.8s;
+}
+
+.txt-fadeIn .observe-txt.inview:nth-child(5), body .observe-txt.inview:nth-child(5) {
+  animation-delay: 1s;
+}
+
+.txt-fadeIn .observe-txt.inview:nth-child(6), body .observe-txt.inview:nth-child(6) {
+  animation-delay: 1.2s;
+}
+
+.label-fadeIn .observe-label.inview, body .observe-label.inview {
+  animation-name: label-moveUp;
+  animation-duration: 0.6s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0.8s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+
+@keyframes label-moveUp {
+  0% {
+    opacity: 0;
+    transform: translateY(6vh);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(5vh);
+  }
+}
+
+.form-fadeIn .observe-form.inview, body .observe-form.inview {
+  animation-name: form-moveUp;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0.8s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+
+@keyframes form-moveUp {
+  0% {
+    opacity: 0;
+    transform: translateY(1vh);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.icon-fadeIn .observe-icon.inview, body .observe-icon.inview {
+  animation-name: icon-popUp;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+
+@keyframes icon-popUp {
+  0% {
+    opacity: 0;
+    transform: translateY(3vh);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateY(-4vh);
+  }
+  70% {
+    opacity: 0.7;
+    transform: translateY(1vh);
+  }
+  90% {
+    opacity: 0.9;
+    transform: translateY(-0.5vh);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.icon-fadeIn .observe-icon.inview:nth-child(1), body .observe-icon.inview:nth-child(1) {
+  animation-delay: 0.13s;
+}
+
+.icon-fadeIn .observe-icon.inview:nth-child(2), body .observe-icon.inview:nth-child(2) {
+  animation-delay: 0.26s;
+}
+
+.icon-fadeIn .observe-icon.inview:nth-child(3), body .observe-icon.inview:nth-child(3) {
+  animation-delay: 0.39s;
+}
+
+.icon-fadeIn .observe-icon.inview:nth-child(4), body .observe-icon.inview:nth-child(4) {
+  animation-delay: 0.52s;
+}
+
+.icon-fadeIn .observe-icon.inview:nth-child(5), body .observe-icon.inview:nth-child(5) {
+  animation-delay: 0.65s;
+}
+
+.icon-fadeIn .observe-icon.inview:nth-child(6), body .observe-icon.inview:nth-child(6) {
+  animation-delay: 0.78s;
+}
+
+.rec-anime .speak__now-recording.inview .speak__now-recording__btn-circle, body .speak__now-recording.inview .speak__now-recording__btn-circle {
+  animation-name: rec-animation;
+  animation-duration: 1.2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+
+@keyframes rec-animation {
+  0% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(3);
+  }
+}
+
+.observe-obj1,
+.observe-obj2,
+.observe-obj3,
+.observe-txt,
+.observe-label,
+.observe-form,
+.observe-icon {
+  opacity: 0;
+}
+
+.bar-expansion .observe-bar.inview, body .observe-bar.inview {
+  animation-name: bar-act;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0.2s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+
+@keyframes bar-act {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+.btn-act, .title__trial > img, .title__login__btn, .main-select__back:hover, .main-select__langs .lang:hover, .top__select__area, .lesson__back-arrow, .lesson__rec__btn, .speak__back-arrow, .speak__rec__btn, .speak__stop__btn {
+  transition: transform all 0.1s ease;
+}
+
+.btn-act:hover, .title__trial > img:hover, .title__login__btn:hover, .main-select__back:hover, .main-select__langs .lang:hover, .top__select__area:hover, .lesson__back-arrow:hover, .lesson__rec__btn:hover, .speak__back-arrow:hover, .speak__rec__btn:hover, .speak__stop__btn:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.btn-act:active, .title__trial > img:active, .title__login__btn:active, .main-select__back:active:hover, .main-select__langs .lang:active:hover, .top__select__area:active, .lesson__back-arrow:active, .lesson__rec__btn:active, .speak__back-arrow:active, .speak__rec__btn:active, .speak__stop__btn:active {
+  transform: translateY(0.5vh);
+}
+
+.btn-hover, .search__btn, .contents__btn, .contents__prev-next form, .appear .bottom-menu__item, .bottom-menuPC__item {
+  transition: transform all 0.2s ease;
+}
+
+.btn-hover:hover, .search__btn:hover, .contents__btn:hover, .contents__prev-next form:hover, .appear .bottom-menu__item:hover, .bottom-menuPC__item:hover {
+  background-color: #44cad1;
+  cursor: pointer;
+}
+
+.btn-hover:active, .search__btn:active, .contents__btn:active, .contents__prev-next form:active, .appear .bottom-menu__item:active, .bottom-menuPC__item:active {
+  background-color: #1ba2a8;
+}
+
+.lesson {
+  max-width: 1024px;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+.lesson__back-arrow {
+  padding: 5vh;
+  width: 12vh;
+  height: auto;
+}
+
+.lesson__back-arrow > img {
+  width: 2vh;
+}
+
+.lesson__title {
+  text-align: center;
+  font-size: calc(0.6875rem + ((1vw - 2.8px) * 0.875));
+  padding: 2vh 0;
+}
+
+.lesson__items__wrapper {
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 7vh;
+  display: flex;
+  flex: auto;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.lesson__items__item {
+  position: relative;
+  width: 37vw;
+  height: 37vw;
+  border-radius: 20px;
+  margin: 3vw;
+  overflow: hidden;
+}
+
+.lesson__items__item:hover::after {
+  content: "";
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: black;
+  opacity: 0.4;
+}
+
+.lesson__items__item:hover .lesson__items__label {
+  opacity: 1;
+}
+
+.lesson__items__img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.lesson__items__label {
+  position: absolute;
+  z-index: 20;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+  width: 100%;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  opacity: 0;
+}
+
+.lesson__items__label-top {
+  font-size: 25px;
+  padding: 5px 0;
+}
+
+.lesson__items__label-under {
+  font-size: 15px;
+}
+
+.lesson__rec__wrapper {
+  width: 50vw;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.lesson__rec__txt {
+  font-size: calc(0.875rem + ((1vw - 3.2px) * 1.7045));
+  padding: 3vh 0;
+}
+
+.lesson__rec__btn {
+  width: 15vw;
+  height: 15vw;
+  border-radius: 200px;
+  background-color: #1ba2a8;
+  margin: 0 auto;
+}
+
+.lesson__rec__btn-arrow {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 10vw;
+  line-height: 15vw;
+}
+
+.speak {
+  max-width: 1024px;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+.speak__back-arrow {
+  padding: 5vh;
+  width: 12vh;
+  height: auto;
+}
+
+.speak__back-arrow > img {
+  width: 2vh;
+}
+
+.speak__title {
+  text-align: center;
+  font-size: calc(0.875rem + ((1vw - 3.2px) * 1.7045));
+  padding: 2vh 0;
+}
+
+.speak__img {
+  position: relative;
+  width: 90%;
+  height: 30vh;
+  margin: 0 auto;
+  border-radius: 15px;
+  overflow: hidden;
+  margin-bottom: 7vh;
+}
+
+.speak__img > img {
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.speak__rec, .speak__stop {
+  display: none;
+}
+
+.speak__rec.inview, .speak__stop.inview {
+  display: block;
+}
+
+.speak__rec__wrapper, .speak__stop__wrapper {
+  width: 50vw;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.speak__rec__txt, .speak__stop__txt {
+  font-weight: 600;
+  font-size: calc(0.875rem + ((1vw - 3.2px) * 1.7045));
+  padding: 3vh 0;
+}
+
+.speak__rec__btn, .speak__stop__btn {
+  width: 25vw;
+  height: 25vw;
+  box-shadow: 2vw 2vw 2vw rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  background-color: #e0f8fc;
+  border: 1px solid #1ba2a8;
+  margin: 0 auto;
+}
+
+.speak__rec__btn-mic, .speak__stop__btn-mic {
+  color: #1ba2a8;
+  font-size: 10vw;
+  line-height: 25vw;
+}
+
+.speak__now-recording {
+  display: none;
+}
+
+.speak__now-recording.inview {
+  display: block;
+}
+
+.speak__now-recording__wrapper {
+  width: 50vw;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.speak__now-recording__txt {
+  font-weight: 600;
+  font-size: calc(0.875rem + ((1vw - 3.2px) * 1.7045));
+  padding: 3vh 0;
+}
+
+.speak__now-recording__btn {
+  position: relative;
+  width: 25vw;
+  height: 25vw;
+  box-shadow: 2vw 2vw 2vw rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  background-color: #f8e0e0;
+  border: 1px solid rgba(233, 45, 44, 0.9);
+  margin: 0 auto;
+}
+
+.speak__now-recording__btn-circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-50%) translateX(-50%);
+  width: 25vw;
+  height: 25vw;
+  border: 1px solid rgba(233, 45, 44, 0.9);
+  border-radius: 50%;
+}
+
+.speak__now-recording__btn-mic {
+  color: rgba(233, 45, 44, 0.9);
+  font-size: 10vw;
+  line-height: 25vw;
+}
+
+.speak__stop__bottom {
+  width: 90%;
+  margin: 4vh auto 0 auto;
+  display: flex;
+}
+
+.speak__stop__listen {
+  width: 33vw;
+  padding: 20px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.speak__stop__check {
+  width: 33vw;
+  padding: 20px;
+  margin: 0 auto;
+  text-align: center;
+}
+
 @media (min-width: 670px) {
   .title__logo {
     font-size: 57px;
@@ -838,6 +1435,49 @@ body {
   .contents__prev-next form {
     width: 20%;
     padding: 10px;
+  }
+  .lesson__title {
+    font-size: calc(0.875rem + ((1vw - 3.2px) * 1.7045));
+  }
+  .lesson__items__wrapper {
+    width: 80%;
+  }
+  .lesson__items__item {
+    width: 27vw;
+    height: 27vw;
+  }
+  .lesson__items__label-top {
+    font-size: 35px;
+    padding: 10px 0;
+  }
+  .lesson__items__label-under {
+    font-size: 20px;
+  }
+  .lesson__rec__btn {
+    width: 12vw;
+    height: 12vw;
+  }
+  .lesson__rec__btn-arrow {
+    font-size: 7vw;
+    line-height: 12vw;
+  }
+  .speak__img {
+    width: 70%;
+  }
+  .speak__rec__txt, .speak__now-recording__txt {
+    font-size: calc(1.125rem + ((1vw - 2.8px) * 1.75));
+  }
+  .speak__rec__btn, .speak__now-recording__btn {
+    width: 16vw;
+    height: 16vw;
+  }
+  .speak__rec__btn-circle, .speak__now-recording__btn-circle {
+    width: 16vw;
+    height: 16vw;
+  }
+  .speak__rec__btn-mic, .speak__now-recording__btn-mic {
+    font-size: 7vw;
+    line-height: 16vw;
   }
 }
 
@@ -928,6 +1568,56 @@ body {
   }
   .bottom-menuPC {
     display: block;
+  }
+  .lesson__title {
+    font-size: calc(0.6875rem + ((1vw - 2.8px) * 0.875));
+  }
+  .lesson__items__wrapper {
+    width: 100%;
+    margin-bottom: 5vh;
+  }
+  .lesson__items__item {
+    width: 170px;
+    height: 170px;
+    margin: 20px;
+  }
+  .lesson__items__label-top {
+    font-size: 35px;
+    padding: 10px 0;
+  }
+  .lesson__items__label-under {
+    font-size: 20px;
+  }
+  .lesson__rec__txt {
+    font-size: calc(0.6875rem + ((1vw - 2.8px) * 0.875));
+  }
+  .lesson__rec__btn {
+    width: 80px;
+    height: 80px;
+  }
+  .lesson__rec__btn-arrow {
+    font-size: 40px;
+    line-height: 80px;
+  }
+  .speak__back-arrow {
+    padding: 3vh;
+  }
+  .speak__img {
+    width: 60%;
+    height: 40vh;
+    margin-bottom: 3vh;
+  }
+  .speak__rec__btn, .speak__now-recording__btn {
+    width: 120px;
+    height: 120px;
+  }
+  .speak__rec__btn-circle, .speak__now-recording__btn-circle {
+    width: 120px;
+    height: 120px;
+  }
+  .speak__rec__btn-mic, .speak__now-recording__btn-mic {
+    font-size: 50px;
+    line-height: 120px;
   }
 }
 /*# sourceMappingURL=bind.css.map */

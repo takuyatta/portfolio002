@@ -168,6 +168,31 @@
    }
 }
 
+// 録音ボタンを押したときの録音中アニメーション
+.rec-anime {
+  &  .speak__now-recording.inview {
+      .speak__now-recording__btn-circle {
+      @include animation(
+         $name: rec-animation,
+         $duration: 1.2s,
+         $timing-function: ease-in-out,
+         $fill-mode: forwards,
+         $iteration-count: infinite
+      );
+      @keyframes rec-animation {
+            0% {
+               opacity: 0.4;
+               transform: scale(1);
+            }
+            100% {
+               opacity: 0;
+               transform: scale(3);
+            }
+      }
+   }
+   }
+}
+
 // 要素がフェードインしてくる前は、予めすべて透明化しておく
 .observe-obj1,
 .observe-obj2,

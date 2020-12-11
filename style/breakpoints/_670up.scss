@@ -75,3 +75,59 @@ $signin-btn: 315px;
       padding: 10px;
    }
 }
+
+.lesson {
+   &__title {
+      font-size: $font-smr;
+   }
+   &__items{
+      &__wrapper {
+         width: 80%;
+      }
+      &__item {
+         width: 27vw;
+         height: 27vw;
+      }
+      &__label {
+         &-top {
+            font-size: 35px;
+            padding: 10px 0;
+         }
+         &-under {
+            font-size: 20px;
+         }
+      }
+   }
+   &__rec__btn {
+      width: 12vw;
+      height: 12vw;
+      &-arrow {
+         font-size: 7vw;
+         line-height: 12vw;
+      }
+   }
+}
+
+.speak {
+   &__img {
+      width: 70%;
+   }
+   &__rec, 
+   &__now-recording {
+      &__txt {
+         font-size: $font-md;
+      }
+      &__btn {
+         width: 16vw;
+         height: 16vw;
+         &-circle {
+            width: 16vw;
+            height: 16vw;
+         }
+         &-mic {
+            font-size: 7vw;
+            line-height: 16vw;
+         }
+      }
+   }
+}
