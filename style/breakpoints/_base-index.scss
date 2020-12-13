@@ -105,9 +105,9 @@ body {
         padding: 8vh 0;
         
         &:hover {
-            @extend .btn-act;
             & > img {
-                transform: scale(1.5);
+                transform: scale(1.8);
+                cursor: pointer;
             }
         }
         & > img {

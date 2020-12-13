@@ -23,7 +23,7 @@ reStartRec.addEventListener('click',function() {
 //Listenボタンのトリガー
 const listenVoice = document.querySelector('.speak__stop__listen');
 listenVoice.addEventListener('click',function() {
-   document.querySelector('.speak__stop').classList.add('listening');
+   document.querySelector('.speak__stop').classList.toggle('listening');
 });
 
 //Checkボタンのトリガー
@@ -36,7 +36,14 @@ checkVoice.addEventListener('click',function() {
 //Muteボタンのトリガー
 const muteVoice = document.querySelector('.speak__answer__mute');
 muteVoice.addEventListener('click',function() {
-   document.querySelector('.speak__answer').classList.add('mute');
+   document.querySelector('.speak__answer').classList.toggle('mute');
+});
+
+//Retryボタンのトリガー
+const reTry = document.querySelector('.speak__answer__retry');
+reTry.addEventListener('click',function() {
+   document.querySelector('.speak__answer').classList.remove('inview');
+   document.querySelector('.speak__rec').classList.add('inview');
 });
 
 //Nextボタンのトリガー

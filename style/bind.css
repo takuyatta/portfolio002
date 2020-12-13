@@ -43,6 +43,34 @@
   position: relative;
 }
 
+.lesson,
+.speak {
+  transition: transform 0.3s;
+}
+
+.lesson {
+  z-index: 40;
+}
+
+.speak {
+  position: fixed;
+  z-index: 30;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.open-rec-page .lesson {
+  position: fixed;
+  z-index: 20;
+  transform: translateX(-100vw);
+}
+
+.open-rec-page .speak {
+  position: relative;
+}
+
 .general-fadeIn .observe-obj1.inview, body .observe-obj1.inview {
   animation-name: general-moveUp;
   animation-duration: 0.8s;
@@ -248,7 +276,7 @@
   animation-duration: 1.2s;
   animation-timing-function: ease-in-out;
   animation-delay: 0s;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 4;
   animation-direction: normal;
   animation-fill-mode: forwards;
 }
@@ -293,16 +321,16 @@
   }
 }
 
-.btn-act, .title__trial > img, .title__login__btn, .main-select__back:hover, .main-select__langs .lang:hover, .top__select__area, .lesson__back-arrow, .lesson__rec__btn, .speak__back-arrow, .speak__rec__btn, .speak__stop__btn, .speak__answer__btn {
+.btn-act, .title__trial > img, .title__login__btn, .main-select__langs .lang:hover, .top__select__area, .lesson__back-arrow, .lesson__rec__btn, .speak__back-arrow, .speak__rec__btn, .speak__stop__btn, .speak__answer__btn {
   transition: transform all 0.1s ease;
 }
 
-.btn-act:hover, .title__trial > img:hover, .title__login__btn:hover, .main-select__back:hover, .main-select__langs .lang:hover, .top__select__area:hover, .lesson__back-arrow:hover, .lesson__rec__btn:hover, .speak__back-arrow:hover, .speak__rec__btn:hover, .speak__stop__btn:hover, .speak__answer__btn:hover {
+.btn-act:hover, .title__trial > img:hover, .title__login__btn:hover, .main-select__langs .lang:hover, .top__select__area:hover, .lesson__back-arrow:hover, .lesson__rec__btn:hover, .speak__back-arrow:hover, .speak__rec__btn:hover, .speak__stop__btn:hover, .speak__answer__btn:hover {
   transform: scale(1.2);
   cursor: pointer;
 }
 
-.btn-act:active, .title__trial > img:active, .title__login__btn:active, .main-select__back:active:hover, .main-select__langs .lang:active:hover, .top__select__area:active, .lesson__back-arrow:active, .lesson__rec__btn:active, .speak__back-arrow:active, .speak__rec__btn:active, .speak__stop__btn:active, .speak__answer__btn:active {
+.btn-act:active, .title__trial > img:active, .title__login__btn:active, .main-select__langs .lang:active:hover, .top__select__area:active, .lesson__back-arrow:active, .lesson__rec__btn:active, .speak__back-arrow:active, .speak__rec__btn:active, .speak__stop__btn:active, .speak__answer__btn:active {
   transform: translateY(0.5vh);
 }
 
@@ -329,13 +357,13 @@
   background-color: #1ba2a8;
 }
 
-.mute-btn-act:hover, .speak__stop__mute:hover, .speak__answer__mute:hover {
+.mute-btn-act:hover, .speak__stop__mute:hover, .speak__stop__retry:hover, .speak__answer__mute:hover, .speak__answer__retry:hover {
   background-color: #1ba2a8;
   color: rgba(255, 255, 255, 0.9);
   cursor: pointer;
 }
 
-.mute-btn-act:active, .speak__stop__mute:active, .speak__answer__mute:active {
+.mute-btn-act:active, .speak__stop__mute:active, .speak__stop__retry:active, .speak__answer__mute:active, .speak__answer__retry:active {
   background-color: rgba(128, 128, 128, 0.9);
   border-color: rgba(128, 128, 128, 0.9);
 }
@@ -437,7 +465,8 @@ body {
 }
 
 .main-select__back:hover > img {
-  transform: scale(1.5);
+  transform: scale(1.8);
+  cursor: pointer;
 }
 
 .main-select__back > img {
@@ -873,6 +902,34 @@ body {
   position: relative;
 }
 
+.lesson,
+.speak {
+  transition: transform 0.3s;
+}
+
+.lesson {
+  z-index: 40;
+}
+
+.speak {
+  position: fixed;
+  z-index: 30;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.open-rec-page .lesson {
+  position: fixed;
+  z-index: 20;
+  transform: translateX(-100vw);
+}
+
+.open-rec-page .speak {
+  position: relative;
+}
+
 .general-fadeIn .observe-obj1.inview, body .observe-obj1.inview {
   animation-name: general-moveUp;
   animation-duration: 0.8s;
@@ -1078,7 +1135,7 @@ body {
   animation-duration: 1.2s;
   animation-timing-function: ease-in-out;
   animation-delay: 0s;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 4;
   animation-direction: normal;
   animation-fill-mode: forwards;
 }
@@ -1123,16 +1180,16 @@ body {
   }
 }
 
-.btn-act, .title__trial > img, .title__login__btn, .main-select__back:hover, .main-select__langs .lang:hover, .top__select__area, .lesson__back-arrow, .lesson__rec__btn, .speak__back-arrow, .speak__rec__btn, .speak__stop__btn, .speak__answer__btn {
+.btn-act, .title__trial > img, .title__login__btn, .main-select__langs .lang:hover, .top__select__area, .lesson__back-arrow, .lesson__rec__btn, .speak__back-arrow, .speak__rec__btn, .speak__stop__btn, .speak__answer__btn {
   transition: transform all 0.1s ease;
 }
 
-.btn-act:hover, .title__trial > img:hover, .title__login__btn:hover, .main-select__back:hover, .main-select__langs .lang:hover, .top__select__area:hover, .lesson__back-arrow:hover, .lesson__rec__btn:hover, .speak__back-arrow:hover, .speak__rec__btn:hover, .speak__stop__btn:hover, .speak__answer__btn:hover {
+.btn-act:hover, .title__trial > img:hover, .title__login__btn:hover, .main-select__langs .lang:hover, .top__select__area:hover, .lesson__back-arrow:hover, .lesson__rec__btn:hover, .speak__back-arrow:hover, .speak__rec__btn:hover, .speak__stop__btn:hover, .speak__answer__btn:hover {
   transform: scale(1.2);
   cursor: pointer;
 }
 
-.btn-act:active, .title__trial > img:active, .title__login__btn:active, .main-select__back:active:hover, .main-select__langs .lang:active:hover, .top__select__area:active, .lesson__back-arrow:active, .lesson__rec__btn:active, .speak__back-arrow:active, .speak__rec__btn:active, .speak__stop__btn:active, .speak__answer__btn:active {
+.btn-act:active, .title__trial > img:active, .title__login__btn:active, .main-select__langs .lang:active:hover, .top__select__area:active, .lesson__back-arrow:active, .lesson__rec__btn:active, .speak__back-arrow:active, .speak__rec__btn:active, .speak__stop__btn:active, .speak__answer__btn:active {
   transform: translateY(0.5vh);
 }
 
@@ -1159,13 +1216,13 @@ body {
   background-color: #1ba2a8;
 }
 
-.mute-btn-act:hover, .speak__stop__mute:hover, .speak__answer__mute:hover {
+.mute-btn-act:hover, .speak__stop__mute:hover, .speak__stop__retry:hover, .speak__answer__mute:hover, .speak__answer__retry:hover {
   background-color: #1ba2a8;
   color: rgba(255, 255, 255, 0.9);
   cursor: pointer;
 }
 
-.mute-btn-act:active, .speak__stop__mute:active, .speak__answer__mute:active {
+.mute-btn-act:active, .speak__stop__mute:active, .speak__stop__retry:active, .speak__answer__mute:active, .speak__answer__retry:active {
   background-color: rgba(128, 128, 128, 0.9);
   border-color: rgba(128, 128, 128, 0.9);
 }
@@ -1176,9 +1233,11 @@ body {
 }
 
 .lesson {
+  position: relative;
   max-width: 1024px;
   height: 100vh;
   margin: 0 auto;
+  background-color: white;
 }
 
 .lesson__back-arrow {
@@ -1289,10 +1348,10 @@ body {
 }
 
 .speak {
-  display: none;
   max-width: 1024px;
   height: 100vh;
   margin: 0 auto;
+  background-color: white;
 }
 
 .speak__back-arrow {
@@ -1432,19 +1491,29 @@ body {
   font-size: calc(0.875rem + ((1vw - 3.2px) * 1.7045));
 }
 
-.speak__stop__listen, .speak__stop__check, .speak__stop__mute, .speak__stop__next, .speak__answer__listen, .speak__answer__check, .speak__answer__mute, .speak__answer__next {
-  width: 33vw;
-  max-width: 250px;
+.speak__stop__listen, .speak__stop__check, .speak__stop__mute, .speak__stop__retry, .speak__stop__next, .speak__answer__listen, .speak__answer__check, .speak__answer__mute, .speak__answer__retry, .speak__answer__next {
   padding: 15px;
+  line-height: normal;
   margin: 0 auto;
   text-align: center;
   border: 1px solid #1ba2a8;
   box-shadow: 2vw 2vw 2vw rgba(0, 0, 0, 0.3);
-  border-radius: 50px;
   font-weight: 700;
 }
 
-.speak__stop__listen, .speak__stop__mute, .speak__answer__listen, .speak__answer__mute {
+.speak__stop__listen, .speak__stop__check, .speak__answer__listen, .speak__answer__check {
+  width: 33vw;
+  max-width: 250px;
+  border-radius: 50px;
+}
+
+.speak__stop__mute, .speak__stop__retry, .speak__stop__next, .speak__answer__mute, .speak__answer__retry, .speak__answer__next {
+  width: 25vw;
+  max-width: 160px;
+  border-radius: 80px;
+}
+
+.speak__stop__listen, .speak__stop__mute, .speak__stop__retry, .speak__answer__listen, .speak__answer__mute, .speak__answer__retry {
   background-color: #e0f8fc;
   color: #1ba2a8;
 }
@@ -1467,8 +1536,25 @@ body {
 .speak__answer__native, .speak__answer__user {
   font-size: calc(0.875rem + ((1vw - 3.2px) * 1.7045));
   font-weight: 600;
+  color: rgba(99, 99, 99, 0.9);
   padding: 2vh 3vw;
   width: 40vw;
+}
+
+.speak__answer__native.correct-answer-sound, .speak__answer__user.correct-answer-sound {
+  color: rgba(233, 45, 44, 0.9);
+}
+
+.speak__answer__native.correct-answer-sound .speak__answer__user-judgeOK, .speak__answer__user.correct-answer-sound .speak__answer__user-judgeOK {
+  display: block;
+}
+
+.speak__answer__native.incorrect-answer-sound, .speak__answer__user.incorrect-answer-sound {
+  color: rgba(44, 104, 233, 0.9);
+}
+
+.speak__answer__native.incorrect-answer-sound .speak__answer__user-judgeNG, .speak__answer__user.incorrect-answer-sound .speak__answer__user-judgeNG {
+  display: block;
 }
 
 .speak__answer__native-icon, .speak__answer__user-icon {
@@ -1491,25 +1577,15 @@ body {
 }
 
 .speak__answer__native-text, .speak__answer__user-text {
+  position: relative;
+  width: 100%;
+  height: calc(1.125rem + ((1vw - 2.8px) * 1.75));
   font-size: calc(1.125rem + ((1vw - 2.8px) * 1.75));
   font-weight: 700;
 }
 
-.speak__answer__native {
-  color: rgba(233, 45, 44, 0.9);
-}
-
-.speak__answer__user {
-  color: rgba(99, 99, 99, 0.9);
-}
-
-.speak__answer__user-text {
-  position: relative;
-  width: 100%;
-  height: calc(1.125rem + ((1vw - 2.8px) * 1.75));
-}
-
-.speak__answer__user-judge {
+.speak__answer__user-judgeOK, .speak__answer__user-judgeNG {
+  display: none;
   position: absolute;
   z-index: 10;
   width: 30%;
@@ -1527,14 +1603,6 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-}
-
-#global-container.open-rec-page .lesson {
-  display: none;
-}
-
-#global-container.open-rec-page .speak {
-  display: block;
 }
 
 @media (min-width: 670px) {

@@ -54,3 +54,32 @@
       position: relative;
    }
 }
+
+// *********** レッスン画面 ⇔ 録音画面のリンク ***********
+
+.lesson,
+.speak {  
+   transition: transform 0.3s;
+}
+.lesson {
+   z-index: 40; 
+}
+.speak {
+   position: fixed;
+   z-index: 30;
+   top: 0;
+   left: 0;
+   right: 0;  
+   bottom: 0;
+}
+
+.open-rec-page {
+   & .lesson {
+      position: fixed;
+      z-index: 20;
+      transform: translateX(-100vw);
+   }
+   & .speak {
+      position: relative;
+   }
+}

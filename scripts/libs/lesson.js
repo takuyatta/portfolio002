@@ -1,4 +1,10 @@
-// メインコンテンツの学習言語選択の クリック時のトリガー
+// lesson画面の各単語画像 の クリック時の音声再生トリガー
+const playSound = document.querySelectorAll('.lesson__items__item');
+playSound.forEach(selectedWord => selectedWord.addEventListener('click',function() {
+   document.querySelector('.lesson__items__item').classList.toggle('play-sound');
+}));
+
+// Try Speaking!ボタン の クリック時のトリガー
 const toRecPage = document.querySelector('.lesson__rec__btn-arrow');
 toRecPage.addEventListener('click',function() {
    document.querySelector('#global-container').classList.add('open-rec-page');

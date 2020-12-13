@@ -10,9 +10,11 @@ body {
 }
 
 .lesson {
+   position: relative;
    max-width: 1024px;
    height: 100vh;
    margin: 0 auto;
+   background-color: white;
    &__back {
       &-arrow {
          padding: 5vh;
@@ -122,10 +124,10 @@ body {
 
 
 .speak {
-   display: none;
    max-width: 1024px;
    height: 100vh;
    margin: 0 auto;
+   background-color: white;
    &__back {
       &-arrow {
          padding: 5vh;
@@ -255,31 +257,53 @@ body {
          display: flex;
          font-size: $font-smr;
       }
+
       &__listen ,
       &__check,
       &__mute,
+      &__retry,
       &__next {
-         width: 33vw;
-         max-width: 250px;
          padding: 15px;
+         line-height: normal;
          margin: 0 auto;
          text-align: center;
          border: 1px solid $cTheme;
          box-shadow: 2vw 2vw 2vw rgba(0,0,0,0.3); 
-         border-radius: 50px;
          font-weight: 700;
       }
+
+      &__listen ,
+      &__check {
+         width: 33vw;
+         max-width: 250px;
+         border-radius: 50px;  
+      }
+
+      &__mute,
+      &__retry,
+      &__next {
+         width: 25vw;
+         max-width: 160px;
+         border-radius: 80px;  
+      }
+
+
       &__listen,
-      &__mute {     
+      &__mute,
+      &__retry {     
          background-color: $cThemeLight;         
          color: $cTheme;      
       }
+
       &__listen {
          @extend .listen-btn-act; 
       }
-      &__mute {
+      &__mute,
+      &__retry {
          @extend .mute-btn-act; 
       }
+
+
       &__check,
       &__next {
          background-color: $cTheme;
@@ -287,6 +311,7 @@ body {
          @extend .Check-btn-act;
       }
    }
+
    &__answer {
       &__wrapper {
          flex-direction: row;
@@ -302,8 +327,21 @@ body {
       &__user {
          font-size: $font-smr;
          font-weight: 600;
+         color: $cGrayDark;
          padding: 2vh 3vw;
          width: 40vw;
+         &.correct-answer-sound {
+            color: $cRed;
+            .speak__answer__user-judgeOK {
+               display: block;
+            }
+         }
+         &.incorrect-answer-sound {
+            color: $cBlue;
+            .speak__answer__user-judgeNG {
+               display: block;
+            }
+         }
          &-icon {
             width: 20vw;
             height: 20vw;
@@ -322,21 +360,17 @@ body {
             object-fit: cover;
          }
          &-text {
+            position: relative;
+            width: 100%;
+            height: $font-md;
             font-size: $font-md;
             font-weight: 700;
          }
       }
-      &__native {
-         color: $cRed;
-      }
       &__user {
-         color: $cGrayDark;
-         &-text {
-            position: relative;
-            width: 100%;
-            height: $font-md;
-         }
-         &-judge {
+         &-judgeOK,
+         &-judgeNG {
+            display: none;
             position: absolute;
             z-index: 10;
             width: 30%;
@@ -355,16 +389,5 @@ body {
             bottom: 0;
          }
       }
-   }
-}
-
-#global-container {
-   &.open-rec-page {
-      .lesson {
-         display: none;
-      }  
-      .speak {
-         display: block;
-      }      
    }
 }
