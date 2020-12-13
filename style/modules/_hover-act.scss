@@ -14,12 +14,45 @@
 
 // クリックボタンをホバーしたときの背景色変化
 .btn-hover {
-    transition: transform all 0.2s ease;
+    transition: all 0.1s ease;
     &:hover {
         background-color: $cThemeHover;
         cursor: pointer;
     }
     &:active {
         background-color: $cTheme;
+    }
+ }
+
+ // Listenボタンのマウスホバー・クリックスタイル
+ .listen-btn-act {
+    &:hover {
+        background-color: $cTheme;
+        color: $cWhite;
+        cursor: pointer;
+    }
+    &:active {
+        background-color: $cTheme;
+    }
+ }
+
+// Muteボタンのマウスホバー・クリックスタイル
+.mute-btn-act {
+    &:hover {
+        background-color: $cTheme;
+        color: $cWhite;
+        cursor: pointer;
+    }
+    &:active {
+        background-color: $cGray;
+        border-color: $cGray;
+    }
+ }
+
+// CheckボタンとNextボタンのマウスホバー・クリックスタイル
+.Check-btn-act {
+    &:hover {
+        color: $cWhite;
+        cursor: pointer;
     }
  }

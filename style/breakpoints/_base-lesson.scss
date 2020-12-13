@@ -8,6 +8,7 @@
 body {
    @extend .rec-anime;
 }
+
 .lesson {
    max-width: 1024px;
    height: 100vh;
@@ -45,6 +46,7 @@ body {
          width: 37vw;
          height: 37vw;
          border-radius: 20px;
+         box-shadow: 2vw 2vw 2vw rgba(0,0,0,0.3); 
          margin: 3vw;
          overflow: hidden;
          &:hover {
@@ -105,6 +107,7 @@ body {
          width: 15vw;
          height: 15vw;
          border-radius: 200px;
+         box-shadow: 2vw 2vw 2vw rgba(0,0,0,0.3); 
          background-color: $cTheme;
          margin: 0 auto;
          @extend .btn-act;
@@ -119,6 +122,7 @@ body {
 
 
 .speak {
+   display: none;
    max-width: 1024px;
    height: 100vh;
    margin: 0 auto;
@@ -144,6 +148,7 @@ body {
       height: 30vh;
       margin: 0 auto;
       border-radius: 15px;
+      box-shadow: 2vw 2vw 2vw rgba(0,0,0,0.3); 
       overflow: hidden;
       margin-bottom: 7vh;
       & > img {
@@ -156,15 +161,27 @@ body {
    }
 
    &__rec,
-   &__stop {
+   &__stop,
+   &__answer {
       &.inview{
          display: block;
       }
+      &.listening {
+         .speak__stop__btn {
+            background-color: $cTheme;
+            &-mic {
+               color: $cWhite;
+            }
+         }
+      }
       display: none;
       &__wrapper {
-         width: 50vw;
+         width: 100%;
          margin: 0 auto;
          text-align: center;
+         display: flex;
+         justify-content: center;
+         flex-direction: column;
       }
       &__txt {
          font-weight: 600;
@@ -230,23 +247,124 @@ body {
       }
    }
 
-   &__stop {
+   &__stop,
+   &__answer {
       &__bottom {
          width: 90%;
-         margin: 4vh auto 0 auto;
+         margin: 2vh auto 0 auto;
          display: flex;
+         font-size: $font-smr;
+      }
+      &__listen ,
+      &__check,
+      &__mute,
+      &__next {
+         width: 33vw;
+         max-width: 250px;
+         padding: 15px;
+         margin: 0 auto;
+         text-align: center;
+         border: 1px solid $cTheme;
+         box-shadow: 2vw 2vw 2vw rgba(0,0,0,0.3); 
+         border-radius: 50px;
+         font-weight: 700;
+      }
+      &__listen,
+      &__mute {     
+         background-color: $cThemeLight;         
+         color: $cTheme;      
       }
       &__listen {
-         width: 33vw;
-         padding: 20px;
-         margin: 0 auto;
-         text-align: center;
+         @extend .listen-btn-act; 
       }
-      &__check {
-         width: 33vw;
-         padding: 20px;
-         margin: 0 auto;
-         text-align: center;
+      &__mute {
+         @extend .mute-btn-act; 
       }
+      &__check,
+      &__next {
+         background-color: $cTheme;
+         color: $cThemeDark;
+         @extend .Check-btn-act;
+      }
+   }
+   &__answer {
+      &__wrapper {
+         flex-direction: row;
+      }
+      &.mute {
+         .speak__answer__mute {
+            background-color: $cGray;
+            border-color: $cGray;
+            color: $cWhite;
+         }
+      }
+      &__native,
+      &__user {
+         font-size: $font-smr;
+         font-weight: 600;
+         padding: 2vh 3vw;
+         width: 40vw;
+         &-icon {
+            width: 20vw;
+            height: 20vw;
+            box-shadow: 2vw 2vw 2vw rgba(0,0,0,0.3); 
+            border-radius: 50%;
+            border: 1px solid $cGray;
+            margin: 2vh auto;
+            position: relative;
+            overflow: hidden;
+         }
+         &-img {
+            position: absolute;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+         }
+         &-text {
+            font-size: $font-md;
+            font-weight: 700;
+         }
+      }
+      &__native {
+         color: $cRed;
+      }
+      &__user {
+         color: $cGrayDark;
+         &-text {
+            position: relative;
+            width: 100%;
+            height: $font-md;
+         }
+         &-judge {
+            position: absolute;
+            z-index: 10;
+            width: 30%;
+            top: 50%;
+            left: 50%;
+            transform: translateY(-50%) translateX(-50%);
+            margin: 0 auto;
+            opacity: 0.5;
+         }
+         &-ans-text {
+            position: absolute;
+            z-index: 20;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+         }
+      }
+   }
+}
+
+#global-container {
+   &.open-rec-page {
+      .lesson {
+         display: none;
+      }  
+      .speak {
+         display: block;
+      }      
    }
 }

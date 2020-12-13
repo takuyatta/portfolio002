@@ -293,21 +293,21 @@
   }
 }
 
-.btn-act, .title__trial > img, .title__login__btn, .main-select__back:hover, .main-select__langs .lang:hover, .top__select__area, .lesson__back-arrow, .lesson__rec__btn, .speak__back-arrow, .speak__rec__btn, .speak__stop__btn {
+.btn-act, .title__trial > img, .title__login__btn, .main-select__back:hover, .main-select__langs .lang:hover, .top__select__area, .lesson__back-arrow, .lesson__rec__btn, .speak__back-arrow, .speak__rec__btn, .speak__stop__btn, .speak__answer__btn {
   transition: transform all 0.1s ease;
 }
 
-.btn-act:hover, .title__trial > img:hover, .title__login__btn:hover, .main-select__back:hover, .main-select__langs .lang:hover, .top__select__area:hover, .lesson__back-arrow:hover, .lesson__rec__btn:hover, .speak__back-arrow:hover, .speak__rec__btn:hover, .speak__stop__btn:hover {
+.btn-act:hover, .title__trial > img:hover, .title__login__btn:hover, .main-select__back:hover, .main-select__langs .lang:hover, .top__select__area:hover, .lesson__back-arrow:hover, .lesson__rec__btn:hover, .speak__back-arrow:hover, .speak__rec__btn:hover, .speak__stop__btn:hover, .speak__answer__btn:hover {
   transform: scale(1.2);
   cursor: pointer;
 }
 
-.btn-act:active, .title__trial > img:active, .title__login__btn:active, .main-select__back:active:hover, .main-select__langs .lang:active:hover, .top__select__area:active, .lesson__back-arrow:active, .lesson__rec__btn:active, .speak__back-arrow:active, .speak__rec__btn:active, .speak__stop__btn:active {
+.btn-act:active, .title__trial > img:active, .title__login__btn:active, .main-select__back:active:hover, .main-select__langs .lang:active:hover, .top__select__area:active, .lesson__back-arrow:active, .lesson__rec__btn:active, .speak__back-arrow:active, .speak__rec__btn:active, .speak__stop__btn:active, .speak__answer__btn:active {
   transform: translateY(0.5vh);
 }
 
 .btn-hover, .search__btn, .contents__btn, .contents__prev-next form, .appear .bottom-menu__item, .bottom-menuPC__item {
-  transition: transform all 0.2s ease;
+  transition: all 0.1s ease;
 }
 
 .btn-hover:hover, .search__btn:hover, .contents__btn:hover, .contents__prev-next form:hover, .appear .bottom-menu__item:hover, .bottom-menuPC__item:hover {
@@ -317,6 +317,32 @@
 
 .btn-hover:active, .search__btn:active, .contents__btn:active, .contents__prev-next form:active, .appear .bottom-menu__item:active, .bottom-menuPC__item:active {
   background-color: #1ba2a8;
+}
+
+.listen-btn-act:hover, .speak__stop__listen:hover, .speak__answer__listen:hover {
+  background-color: #1ba2a8;
+  color: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+}
+
+.listen-btn-act:active, .speak__stop__listen:active, .speak__answer__listen:active {
+  background-color: #1ba2a8;
+}
+
+.mute-btn-act:hover, .speak__stop__mute:hover, .speak__answer__mute:hover {
+  background-color: #1ba2a8;
+  color: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+}
+
+.mute-btn-act:active, .speak__stop__mute:active, .speak__answer__mute:active {
+  background-color: rgba(128, 128, 128, 0.9);
+  border-color: rgba(128, 128, 128, 0.9);
+}
+
+.Check-btn-act:hover, .speak__stop__check:hover, .speak__stop__next:hover, .speak__answer__check:hover, .speak__answer__next:hover {
+  color: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
 }
 
 body {
@@ -1097,21 +1123,21 @@ body {
   }
 }
 
-.btn-act, .title__trial > img, .title__login__btn, .main-select__back:hover, .main-select__langs .lang:hover, .top__select__area, .lesson__back-arrow, .lesson__rec__btn, .speak__back-arrow, .speak__rec__btn, .speak__stop__btn {
+.btn-act, .title__trial > img, .title__login__btn, .main-select__back:hover, .main-select__langs .lang:hover, .top__select__area, .lesson__back-arrow, .lesson__rec__btn, .speak__back-arrow, .speak__rec__btn, .speak__stop__btn, .speak__answer__btn {
   transition: transform all 0.1s ease;
 }
 
-.btn-act:hover, .title__trial > img:hover, .title__login__btn:hover, .main-select__back:hover, .main-select__langs .lang:hover, .top__select__area:hover, .lesson__back-arrow:hover, .lesson__rec__btn:hover, .speak__back-arrow:hover, .speak__rec__btn:hover, .speak__stop__btn:hover {
+.btn-act:hover, .title__trial > img:hover, .title__login__btn:hover, .main-select__back:hover, .main-select__langs .lang:hover, .top__select__area:hover, .lesson__back-arrow:hover, .lesson__rec__btn:hover, .speak__back-arrow:hover, .speak__rec__btn:hover, .speak__stop__btn:hover, .speak__answer__btn:hover {
   transform: scale(1.2);
   cursor: pointer;
 }
 
-.btn-act:active, .title__trial > img:active, .title__login__btn:active, .main-select__back:active:hover, .main-select__langs .lang:active:hover, .top__select__area:active, .lesson__back-arrow:active, .lesson__rec__btn:active, .speak__back-arrow:active, .speak__rec__btn:active, .speak__stop__btn:active {
+.btn-act:active, .title__trial > img:active, .title__login__btn:active, .main-select__back:active:hover, .main-select__langs .lang:active:hover, .top__select__area:active, .lesson__back-arrow:active, .lesson__rec__btn:active, .speak__back-arrow:active, .speak__rec__btn:active, .speak__stop__btn:active, .speak__answer__btn:active {
   transform: translateY(0.5vh);
 }
 
 .btn-hover, .search__btn, .contents__btn, .contents__prev-next form, .appear .bottom-menu__item, .bottom-menuPC__item {
-  transition: transform all 0.2s ease;
+  transition: all 0.1s ease;
 }
 
 .btn-hover:hover, .search__btn:hover, .contents__btn:hover, .contents__prev-next form:hover, .appear .bottom-menu__item:hover, .bottom-menuPC__item:hover {
@@ -1121,6 +1147,32 @@ body {
 
 .btn-hover:active, .search__btn:active, .contents__btn:active, .contents__prev-next form:active, .appear .bottom-menu__item:active, .bottom-menuPC__item:active {
   background-color: #1ba2a8;
+}
+
+.listen-btn-act:hover, .speak__stop__listen:hover, .speak__answer__listen:hover {
+  background-color: #1ba2a8;
+  color: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+}
+
+.listen-btn-act:active, .speak__stop__listen:active, .speak__answer__listen:active {
+  background-color: #1ba2a8;
+}
+
+.mute-btn-act:hover, .speak__stop__mute:hover, .speak__answer__mute:hover {
+  background-color: #1ba2a8;
+  color: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+}
+
+.mute-btn-act:active, .speak__stop__mute:active, .speak__answer__mute:active {
+  background-color: rgba(128, 128, 128, 0.9);
+  border-color: rgba(128, 128, 128, 0.9);
+}
+
+.Check-btn-act:hover, .speak__stop__check:hover, .speak__stop__next:hover, .speak__answer__check:hover, .speak__answer__next:hover {
+  color: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
 }
 
 .lesson {
@@ -1160,6 +1212,7 @@ body {
   width: 37vw;
   height: 37vw;
   border-radius: 20px;
+  box-shadow: 2vw 2vw 2vw rgba(0, 0, 0, 0.3);
   margin: 3vw;
   overflow: hidden;
 }
@@ -1224,6 +1277,7 @@ body {
   width: 15vw;
   height: 15vw;
   border-radius: 200px;
+  box-shadow: 2vw 2vw 2vw rgba(0, 0, 0, 0.3);
   background-color: #1ba2a8;
   margin: 0 auto;
 }
@@ -1235,6 +1289,7 @@ body {
 }
 
 .speak {
+  display: none;
   max-width: 1024px;
   height: 100vh;
   margin: 0 auto;
@@ -1262,6 +1317,7 @@ body {
   height: 30vh;
   margin: 0 auto;
   border-radius: 15px;
+  box-shadow: 2vw 2vw 2vw rgba(0, 0, 0, 0.3);
   overflow: hidden;
   margin-bottom: 7vh;
 }
@@ -1274,27 +1330,38 @@ body {
   object-fit: cover;
 }
 
-.speak__rec, .speak__stop {
+.speak__rec, .speak__stop, .speak__answer {
   display: none;
 }
 
-.speak__rec.inview, .speak__stop.inview {
+.speak__rec.inview, .speak__stop.inview, .speak__answer.inview {
   display: block;
 }
 
-.speak__rec__wrapper, .speak__stop__wrapper {
-  width: 50vw;
-  margin: 0 auto;
-  text-align: center;
+.speak__rec.listening .speak__stop__btn, .speak__stop.listening .speak__stop__btn, .speak__answer.listening .speak__stop__btn {
+  background-color: #1ba2a8;
 }
 
-.speak__rec__txt, .speak__stop__txt {
+.speak__rec.listening .speak__stop__btn-mic, .speak__stop.listening .speak__stop__btn-mic, .speak__answer.listening .speak__stop__btn-mic {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.speak__rec__wrapper, .speak__stop__wrapper, .speak__answer__wrapper {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.speak__rec__txt, .speak__stop__txt, .speak__answer__txt {
   font-weight: 600;
   font-size: calc(0.875rem + ((1vw - 3.2px) * 1.7045));
   padding: 3vh 0;
 }
 
-.speak__rec__btn, .speak__stop__btn {
+.speak__rec__btn, .speak__stop__btn, .speak__answer__btn {
   width: 25vw;
   height: 25vw;
   box-shadow: 2vw 2vw 2vw rgba(0, 0, 0, 0.3);
@@ -1304,7 +1371,7 @@ body {
   margin: 0 auto;
 }
 
-.speak__rec__btn-mic, .speak__stop__btn-mic {
+.speak__rec__btn-mic, .speak__stop__btn-mic, .speak__answer__btn-mic {
   color: #1ba2a8;
   font-size: 10vw;
   line-height: 25vw;
@@ -1358,24 +1425,116 @@ body {
   line-height: 25vw;
 }
 
-.speak__stop__bottom {
+.speak__stop__bottom, .speak__answer__bottom {
   width: 90%;
-  margin: 4vh auto 0 auto;
+  margin: 2vh auto 0 auto;
   display: flex;
+  font-size: calc(0.875rem + ((1vw - 3.2px) * 1.7045));
 }
 
-.speak__stop__listen {
+.speak__stop__listen, .speak__stop__check, .speak__stop__mute, .speak__stop__next, .speak__answer__listen, .speak__answer__check, .speak__answer__mute, .speak__answer__next {
   width: 33vw;
-  padding: 20px;
+  max-width: 250px;
+  padding: 15px;
   margin: 0 auto;
   text-align: center;
+  border: 1px solid #1ba2a8;
+  box-shadow: 2vw 2vw 2vw rgba(0, 0, 0, 0.3);
+  border-radius: 50px;
+  font-weight: 700;
 }
 
-.speak__stop__check {
-  width: 33vw;
-  padding: 20px;
+.speak__stop__listen, .speak__stop__mute, .speak__answer__listen, .speak__answer__mute {
+  background-color: #e0f8fc;
+  color: #1ba2a8;
+}
+
+.speak__stop__check, .speak__stop__next, .speak__answer__check, .speak__answer__next {
+  background-color: #1ba2a8;
+  color: #0b4346;
+}
+
+.speak__answer__wrapper {
+  flex-direction: row;
+}
+
+.speak__answer.mute .speak__answer__mute {
+  background-color: rgba(128, 128, 128, 0.9);
+  border-color: rgba(128, 128, 128, 0.9);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.speak__answer__native, .speak__answer__user {
+  font-size: calc(0.875rem + ((1vw - 3.2px) * 1.7045));
+  font-weight: 600;
+  padding: 2vh 3vw;
+  width: 40vw;
+}
+
+.speak__answer__native-icon, .speak__answer__user-icon {
+  width: 20vw;
+  height: 20vw;
+  box-shadow: 2vw 2vw 2vw rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  border: 1px solid rgba(128, 128, 128, 0.9);
+  margin: 2vh auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.speak__answer__native-img, .speak__answer__user-img {
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.speak__answer__native-text, .speak__answer__user-text {
+  font-size: calc(1.125rem + ((1vw - 2.8px) * 1.75));
+  font-weight: 700;
+}
+
+.speak__answer__native {
+  color: rgba(233, 45, 44, 0.9);
+}
+
+.speak__answer__user {
+  color: rgba(99, 99, 99, 0.9);
+}
+
+.speak__answer__user-text {
+  position: relative;
+  width: 100%;
+  height: calc(1.125rem + ((1vw - 2.8px) * 1.75));
+}
+
+.speak__answer__user-judge {
+  position: absolute;
+  z-index: 10;
+  width: 30%;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
   margin: 0 auto;
-  text-align: center;
+  opacity: 0.5;
+}
+
+.speak__answer__user-ans-text {
+  position: absolute;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+#global-container.open-rec-page .lesson {
+  display: none;
+}
+
+#global-container.open-rec-page .speak {
+  display: block;
 }
 
 @media (min-width: 670px) {
@@ -1464,20 +1623,33 @@ body {
   .speak__img {
     width: 70%;
   }
-  .speak__rec__txt, .speak__now-recording__txt {
+  .speak__rec__txt, .speak__now-recording__txt, .speak__stop__txt, .speak__answer__txt {
     font-size: calc(1.125rem + ((1vw - 2.8px) * 1.75));
   }
-  .speak__rec__btn, .speak__now-recording__btn {
+  .speak__rec__btn, .speak__now-recording__btn, .speak__stop__btn, .speak__answer__btn {
     width: 16vw;
     height: 16vw;
   }
-  .speak__rec__btn-circle, .speak__now-recording__btn-circle {
+  .speak__rec__btn-circle, .speak__now-recording__btn-circle, .speak__stop__btn-circle, .speak__answer__btn-circle {
     width: 16vw;
     height: 16vw;
   }
-  .speak__rec__btn-mic, .speak__now-recording__btn-mic {
+  .speak__rec__btn-mic, .speak__now-recording__btn-mic, .speak__stop__btn-mic, .speak__answer__btn-mic {
     font-size: 7vw;
     line-height: 16vw;
+  }
+  .speak__rec__bottom, .speak__now-recording__bottom, .speak__stop__bottom, .speak__answer__bottom {
+    width: 80%;
+  }
+  .speak__rec__listen, .speak__rec__check, .speak__rec__mute, .speak__rec__next, .speak__now-recording__listen, .speak__now-recording__check, .speak__now-recording__mute, .speak__now-recording__next, .speak__stop__listen, .speak__stop__check, .speak__stop__mute, .speak__stop__next, .speak__answer__listen, .speak__answer__check, .speak__answer__mute, .speak__answer__next {
+    padding: 20px;
+  }
+  .speak__rec__native, .speak__rec__user, .speak__now-recording__native, .speak__now-recording__user, .speak__stop__native, .speak__stop__user, .speak__answer__native, .speak__answer__user {
+    width: 30vw;
+  }
+  .speak__rec__native-icon, .speak__rec__user-icon, .speak__now-recording__native-icon, .speak__now-recording__user-icon, .speak__stop__native-icon, .speak__stop__user-icon, .speak__answer__native-icon, .speak__answer__user-icon {
+    width: 15vw;
+    height: 15vw;
   }
 }
 
@@ -1607,17 +1779,24 @@ body {
     height: 40vh;
     margin-bottom: 3vh;
   }
-  .speak__rec__btn, .speak__now-recording__btn {
+  .speak__rec__btn, .speak__now-recording__btn, .speak__stop__btn, .speak__answer__btn {
     width: 120px;
     height: 120px;
   }
-  .speak__rec__btn-circle, .speak__now-recording__btn-circle {
+  .speak__rec__btn-circle, .speak__now-recording__btn-circle, .speak__stop__btn-circle, .speak__answer__btn-circle {
     width: 120px;
     height: 120px;
   }
-  .speak__rec__btn-mic, .speak__now-recording__btn-mic {
+  .speak__rec__btn-mic, .speak__now-recording__btn-mic, .speak__stop__btn-mic, .speak__answer__btn-mic {
     font-size: 50px;
     line-height: 120px;
+  }
+  .speak__rec__native, .speak__rec__user, .speak__now-recording__native, .speak__now-recording__user, .speak__stop__native, .speak__stop__user, .speak__answer__native, .speak__answer__user {
+    width: 400px;
+  }
+  .speak__rec__native-icon, .speak__rec__user-icon, .speak__now-recording__native-icon, .speak__now-recording__user-icon, .speak__stop__native-icon, .speak__stop__user-icon, .speak__answer__native-icon, .speak__answer__user-icon {
+    width: 100px;
+    height: 100px;
   }
 }
 /*# sourceMappingURL=bind.css.map */

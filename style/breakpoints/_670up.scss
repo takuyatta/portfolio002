@@ -113,7 +113,9 @@ $signin-btn: 315px;
       width: 70%;
    }
    &__rec, 
-   &__now-recording {
+   &__now-recording,
+   &__stop,
+   &__answer {
       &__txt {
          font-size: $font-md;
       }
@@ -127,6 +129,23 @@ $signin-btn: 315px;
          &-mic {
             font-size: 7vw;
             line-height: 16vw;
+         }
+      }
+      &__bottom {
+         width: 80%;
+      }
+      &__listen ,
+      &__check,
+      &__mute,
+      &__next {
+         padding: 20px;
+      }
+      &__native,
+      &__user {
+         width: 30vw;
+         &-icon {
+            width: 15vw;
+            height: 15vw;
          }
       }
    }

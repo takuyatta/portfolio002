@@ -149,7 +149,9 @@
       margin-bottom: 3vh;
    }
    &__rec, 
-   &__now-recording {
+   &__now-recording,
+   &__stop,
+   &__answer {
       &__btn {
          width: 120px;
          height: 120px;
@@ -160,6 +162,14 @@
          &-mic {
             font-size: 50px;
             line-height: 120px;
+         }
+      }
+      &__native,
+      &__user {
+         width: 400px;
+         &-icon {
+            width: 100px;
+            height: 100px;
          }
       }
    }
